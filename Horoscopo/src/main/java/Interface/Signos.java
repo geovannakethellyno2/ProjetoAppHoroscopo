@@ -1,8 +1,14 @@
+package Interface;
+
  /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Interface;
+/*package Interface; */
+
+import java.awt.Image;
+import java.time.LocalDate;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,8 +22,240 @@ public class Signos extends javax.swing.JFrame {
      * Creates new form Signos
      */
     public Signos() {
-        initComponents();
+        initComponents();{
+      RedimensionarImagens();  
+        
+    }}
+    
+    int diaSemana;
+  
+public void RedimensionarImagens() {
+
+    // Áries
+    ImageIcon aries = (ImageIcon) imgSignoAries.getIcon();
+    Image imgAries = aries.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoAries.setIcon(new ImageIcon(imgAries));
+
+    // Touro
+    ImageIcon touro = (ImageIcon) imgSignoTouro.getIcon();
+    Image imgTouro = touro.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoTouro.setIcon(new ImageIcon(imgTouro));
+
+    // Gêmeos
+    ImageIcon gemeos = (ImageIcon) imgSignoGemeos.getIcon();
+    Image imgGemeos = gemeos.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoGemeos.setIcon(new ImageIcon(imgGemeos));
+
+    // Câncer
+    ImageIcon cancer = (ImageIcon) imgSignoCancer.getIcon();
+    Image imgCancer = cancer.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoCancer.setIcon(new ImageIcon(imgCancer));
+
+    // Leão
+    ImageIcon leao = (ImageIcon) imgSignoLeao.getIcon();
+    Image imgLeao = leao.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoLeao.setIcon(new ImageIcon(imgLeao));
+
+    // Virgem
+    ImageIcon virgem = (ImageIcon) imgSignoVirgem.getIcon();
+    Image imgVirgem = virgem.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoVirgem.setIcon(new ImageIcon(imgVirgem));
+
+    // Libra
+    ImageIcon libra = (ImageIcon) imgSignoLibra.getIcon();
+    Image imgLibra = libra.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoLibra.setIcon(new ImageIcon(imgLibra));
+
+    // Escorpião
+    ImageIcon escorpiao = (ImageIcon) imgSignoEscorpiao.getIcon();
+    Image imgEscorpiao = escorpiao.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoEscorpiao.setIcon(new ImageIcon(imgEscorpiao));
+
+    // Sagitário
+    ImageIcon sagitario = (ImageIcon) imgSignoSagitario.getIcon();
+    Image imgSagitario = sagitario.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoSagitario.setIcon(new ImageIcon(imgSagitario));
+
+    // Capricórnio
+    ImageIcon capricornio = (ImageIcon) imgSignoCapricornio.getIcon();
+    Image imgCapricornio = capricornio.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoCapricornio.setIcon(new ImageIcon(imgCapricornio));
+
+    // Aquário
+    ImageIcon aquario = (ImageIcon) imgSignoAquario.getIcon();
+    Image imgAquario = aquario.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoAquario.setIcon(new ImageIcon(imgAquario));
+
+    // Peixes
+    ImageIcon peixes = (ImageIcon) imgSignoPeixes.getIcon();
+    Image imgPeixes = peixes.getImage().getScaledInstance(
+            400, 700, Image.SCALE_SMOOTH);
+    imgSignoPeixes.setIcon(new ImageIcon(imgPeixes));
+}
+public void PreencherPrevisao(){
+int diaSemana = LocalDate.now().getDayOfWeek().getValue();
+
+
+
+switch (diaSemana) {
+
+    case 1: // Segunda-feira
+
+        txPrevisaoAries.setText("Hoje é um bom dia para começar novos projetos e confiar mais em suas decisões.");
+        txPrevisaoTouro.setText("Mantenha a calma e organize suas tarefas. A paciência ajudará você a alcançar seus objetivos.");
+        txPrevisaoGemeos.setText("Sua comunicação estará favorecida. Aproveite para conversar e trocar novas ideias.");
+        txPrevisaoCancer.setText("Valorize as pessoas próximas e reserve um tempo para cuidar dos seus sentimentos.");
+        txPrevisaoLeao.setText("Sua confiança estará em alta. Use sua criatividade para enfrentar os desafios do dia.");
+        txPrevisaoVirgem.setText("Organização será sua aliada. Concentre-se nas tarefas mais importantes.");
+        txPrevisaoLibra.setText("Procure manter o equilíbrio e evite discussões desnecessárias.");
+        txPrevisaoEscorpiao.setText("Confie na sua intuição, mas pense bem antes de tomar decisões importantes.");
+        txPrevisaoSagitario.setText("Um dia favorável para aprender algo novo e planejar seus próximos passos.");
+        txPrevisaoCapricornio.setText("Sua dedicação poderá trazer bons resultados. Continue focado em seus objetivos.");
+        txPrevisaoAquario.setText("Novas ideias podem surgir. Não tenha medo de pensar de maneira diferente.");
+        txPrevisaoPeixes.setText("Ouça sua intuição e reserve um momento para cuidar de si mesmo.");
+
+        break;
+
+
+    case 2: // Terça-feira
+
+        txPrevisaoAries.setText("Sua energia estará forte hoje. Aproveite para colocar seus planos em prática.");
+        txPrevisaoTouro.setText("Tenha paciência e não tente resolver tudo de uma vez. Cada passo é importante.");
+        txPrevisaoGemeos.setText("Boas conversas podem trazer novas oportunidades e ideias interessantes.");
+        txPrevisaoCancer.setText("Um bom dia para fortalecer amizades e demonstrar carinho por quem você gosta.");
+        txPrevisaoLeao.setText("Você poderá se destacar em alguma atividade. Confie no seu potencial.");
+        txPrevisaoVirgem.setText("Preste atenção aos detalhes e organize melhor seu tempo.");
+        txPrevisaoLibra.setText("Evite indecisões e escolha aquilo que realmente faz sentido para você.");
+        txPrevisaoEscorpiao.setText("Mantenha o foco e não deixe pequenas dificuldades atrapalharem seus planos.");
+        txPrevisaoSagitario.setText("Uma nova possibilidade poderá despertar sua curiosidade. Esteja aberto às novidades.");
+        txPrevisaoCapricornio.setText("O esforço realizado hoje poderá contribuir para resultados futuros.");
+        txPrevisaoAquario.setText("Sua criatividade estará em destaque. Aproveite para desenvolver novas ideias.");
+        txPrevisaoPeixes.setText("Um momento de tranquilidade poderá ajudar você a organizar seus pensamentos.");
+
+        break;
+
+
+    case 3: // Quarta-feira
+
+        txPrevisaoAries.setText("Não tenha medo de assumir novos desafios. Sua determinação fará diferença.");
+        txPrevisaoTouro.setText("Um dia para manter os pés no chão e continuar trabalhando com tranquilidade.");
+        txPrevisaoGemeos.setText("Sua curiosidade estará forte. Aproveite para descobrir algo interessante.");
+        txPrevisaoCancer.setText("Procure ouvir seus sentimentos, mas também considere os conselhos de pessoas de confiança.");
+        txPrevisaoLeao.setText("Sua presença poderá chamar atenção. Use essa energia de maneira positiva.");
+        txPrevisaoVirgem.setText("Concentre-se no que realmente importa e evite preocupações desnecessárias.");
+        txPrevisaoLibra.setText("O diálogo será importante para resolver possíveis diferenças.");
+        txPrevisaoEscorpiao.setText("Você terá força para superar pequenos obstáculos. Continue determinado.");
+        txPrevisaoSagitario.setText("Um bom dia para pensar em novas experiências e ampliar seus conhecimentos.");
+        txPrevisaoCapricornio.setText("Mantenha a disciplina e não desista diante das primeiras dificuldades.");
+        txPrevisaoAquario.setText("Uma ideia diferente pode ajudar a solucionar um problema antigo.");
+        txPrevisaoPeixes.setText("Sua sensibilidade estará maior. Use-a para compreender melhor as pessoas ao seu redor.");
+
+        break;
+
+
+    case 4: // Quinta-feira
+
+        txPrevisaoAries.setText("Antes de agir, pense nas consequências. Equilíbrio entre coragem e cautela será importante.");
+        txPrevisaoTouro.setText("Tenha confiança no caminho que escolheu e continue avançando com paciência.");
+        txPrevisaoGemeos.setText("Uma conversa inesperada pode trazer uma nova perspectiva para você.");
+        txPrevisaoCancer.setText("Cuide da sua energia e procure ficar perto de pessoas que fazem você se sentir bem.");
+        txPrevisaoLeao.setText("Sua criatividade pode abrir novas possibilidades. Acredite mais nas suas ideias.");
+        txPrevisaoVirgem.setText("Organize suas prioridades e evite deixar pequenas tarefas acumularem.");
+        txPrevisaoLibra.setText("Procure encontrar um ponto de equilíbrio entre suas necessidades e as dos outros.");
+        txPrevisaoEscorpiao.setText("Mantenha seus objetivos em mente e não permita que distrações tirem seu foco.");
+        txPrevisaoSagitario.setText("O dia favorece novos aprendizados e planos para o futuro.");
+        txPrevisaoCapricornio.setText("Seu esforço e responsabilidade poderão fazer diferença em uma tarefa importante.");
+        txPrevisaoAquario.setText("Não tenha medo de apresentar suas ideias. Sua criatividade pode surpreender.");
+        txPrevisaoPeixes.setText("Reserve um tempo para descansar e fazer algo que traga tranquilidade.");
+
+        break;
+
+
+    case 5: // Sexta-feira
+
+        txPrevisaoAries.setText("A semana está chegando ao fim. Aproveite para comemorar pequenas conquistas.");
+        txPrevisaoTouro.setText("Um dia agradável para concluir pendências e aproveitar momentos de tranquilidade.");
+        txPrevisaoGemeos.setText("Sua comunicação estará em destaque. Aproveite para conversar e se divertir.");
+        txPrevisaoCancer.setText("Um bom momento para estar perto de amigos e familiares.");
+        txPrevisaoLeao.setText("Aproveite sua energia e criatividade para terminar a semana de forma positiva.");
+        txPrevisaoVirgem.setText("Finalize suas tarefas com calma e permita-se descansar depois.");
+        txPrevisaoLibra.setText("O dia pode trazer momentos agradáveis e boas conversas.");
+        txPrevisaoEscorpiao.setText("Deixe de lado algumas preocupações e aproveite melhor o momento presente.");
+        txPrevisaoSagitario.setText("A sexta-feira favorece diversão, encontros e novas experiências.");
+        txPrevisaoCapricornio.setText("Depois de uma semana de dedicação, permita-se relaxar um pouco.");
+        txPrevisaoAquario.setText("Um dia interessante para socializar e compartilhar suas ideias.");
+        txPrevisaoPeixes.setText("Aproveite o dia para se divertir e ficar perto de quem faz bem a você.");
+
+        break;
+
+
+    case 6: // Sábado
+
+        txPrevisaoAries.setText("Aproveite o sábado para descansar e fazer algo que realmente gosta.");
+        txPrevisaoTouro.setText("Um dia ideal para relaxar e aproveitar pequenos momentos de conforto.");
+        txPrevisaoGemeos.setText("Procure variar a rotina e fazer algo diferente neste sábado.");
+        txPrevisaoCancer.setText("Passe um tempo com pessoas queridas e aproveite momentos especiais.");
+        txPrevisaoLeao.setText("Divirta-se e aproveite sua criatividade para tornar o dia mais interessante.");
+        txPrevisaoVirgem.setText("Depois de organizar suas responsabilidades, reserve um tempo para descansar.");
+        txPrevisaoLibra.setText("Busque atividades que tragam leveza e equilíbrio para o seu dia.");
+        txPrevisaoEscorpiao.setText("Um sábado tranquilo pode ajudar você a recuperar suas energias.");
+        txPrevisaoSagitario.setText("Aproveite para sair da rotina e experimentar algo novo.");
+        txPrevisaoCapricornio.setText("Descanse e aproveite o tempo livre sem pensar demais nas obrigações.");
+        txPrevisaoAquario.setText("Um ótimo momento para colocar em prática uma ideia diferente.");
+        txPrevisaoPeixes.setText("Aproveite o sábado para relaxar, ouvir música ou fazer algo criativo.");
+
+        break;
+
+
+    case 7: // Domingo
+
+        txPrevisaoAries.setText("Domingo é um bom momento para descansar e planejar uma nova semana.");
+        txPrevisaoTouro.setText("Aproveite o dia com tranquilidade e valorize os pequenos momentos.");
+        txPrevisaoGemeos.setText("Converse com pessoas queridas e compartilhe suas ideias para a próxima semana.");
+        txPrevisaoCancer.setText("Um dia especial para estar com a família e fortalecer os laços afetivos.");
+        txPrevisaoLeao.setText("Relaxe, divirta-se e prepare-se para começar a próxima semana com confiança.");
+        txPrevisaoVirgem.setText("Organize mentalmente seus próximos objetivos, mas também reserve tempo para descansar.");
+        txPrevisaoLibra.setText("Procure terminar a semana em paz e com pensamentos positivos.");
+        txPrevisaoEscorpiao.setText("Use o domingo para recuperar suas energias e refletir sobre seus próximos passos.");
+        txPrevisaoSagitario.setText("Planeje novas aventuras e mantenha sua curiosidade sempre ativa.");
+        txPrevisaoCapricornio.setText("Um bom dia para descansar e organizar seus objetivos para a semana.");
+        txPrevisaoAquario.setText("Use o domingo para pensar em novas ideias e possibilidades.");
+        txPrevisaoPeixes.setText("Descanse, cuide de si e prepare-se emocionalmente para uma nova semana.");
+
+        break;
+
+
+    default:
+        txPrevisaoAries.setText("");
+        txPrevisaoTouro.setText("");
+        txPrevisaoGemeos.setText("");
+        txPrevisaoCancer.setText("");
+        txPrevisaoLeao.setText("");
+        txPrevisaoVirgem.setText("");
+        txPrevisaoLibra.setText("");
+        txPrevisaoEscorpiao.setText("");
+        txPrevisaoSagitario.setText("");
+        txPrevisaoCapricornio.setText("");
+        txPrevisaoAquario.setText("");
+        txPrevisaoPeixes.setText("");
+         break; 
+         
+
+}
     }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,8 +294,8 @@ public class Signos extends javax.swing.JFrame {
         tfCompatibilidade = new javax.swing.JTextField();
         imagemfundoinicio = new javax.swing.JLabel();
         aries = new javax.swing.JPanel();
-        areaInformacoes = new javax.swing.JPanel();
-        imgSigno = new javax.swing.JLabel();
+        areaInformacoesAries = new javax.swing.JPanel();
+        imgSignoAries = new javax.swing.JLabel();
         tituloAries = new javax.swing.JLabel();
         periodoAries = new javax.swing.JLabel();
         elementoAries = new javax.swing.JLabel();
@@ -69,38 +307,38 @@ public class Signos extends javax.swing.JFrame {
         tfPlanetaAries = new javax.swing.JTextField();
         tfCorAries = new javax.swing.JTextField();
         tfNumeroAries = new javax.swing.JTextField();
-        areaCaracteristicas = new javax.swing.JPanel();
-        tituloCaracteristicas = new javax.swing.JLabel();
-        pForesAries = new javax.swing.JLabel();
+        areaCaracteristicasAries = new javax.swing.JPanel();
+        tituloCaracteristicasAries = new javax.swing.JLabel();
+        pFortesAries = new javax.swing.JLabel();
         pMelhorarAries = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txPFortesAries = new javax.swing.JTextArea();
+        tfPFortesAries = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         txpMelhorarAries = new javax.swing.JTextArea();
-        areaPrevisoes = new javax.swing.JPanel();
+        areaPrevisoesAries = new javax.swing.JPanel();
         previsaoAries = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txPrevisaoAries = new javax.swing.JTextArea();
         btnAtualizarPrevisoesAries = new javax.swing.JButton();
-        areaEnergia = new javax.swing.JPanel();
+        areaEnergiaAries = new javax.swing.JPanel();
         tituloEnergiaAries = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        amorAries = new javax.swing.JLabel();
+        trabalhoAries = new javax.swing.JLabel();
+        saudeAries = new javax.swing.JLabel();
+        sorteAries = new javax.swing.JLabel();
         tfAmorAries = new javax.swing.JTextField();
         tfTrabalhoAries = new javax.swing.JTextField();
         tfSaudeAries = new javax.swing.JTextField();
         tfSorteAries = new javax.swing.JTextField();
-        areaMensagem = new javax.swing.JPanel();
+        areaMensagemAries = new javax.swing.JPanel();
         tituloMensagemAries = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txMensagemAries = new javax.swing.JTextArea();
         btnCopiarMensagemAries = new javax.swing.JButton();
         imagemfundoaries = new javax.swing.JLabel();
         touro = new javax.swing.JPanel();
-        areaInformacoes12 = new javax.swing.JPanel();
-        imgSigno12 = new javax.swing.JLabel();
+        areaInformacoesTouro = new javax.swing.JPanel();
+        imgSignoTouro = new javax.swing.JLabel();
         tituloAries12 = new javax.swing.JLabel();
         periodoTouro1 = new javax.swing.JLabel();
         elementoTouro1 = new javax.swing.JLabel();
@@ -112,12 +350,12 @@ public class Signos extends javax.swing.JFrame {
         tfPlanetaTouro1 = new javax.swing.JTextField();
         tfCorTouro1 = new javax.swing.JTextField();
         tfNumeroTouro1 = new javax.swing.JTextField();
-        areaPrevisoes12 = new javax.swing.JPanel();
+        areaPrevisoesTouro = new javax.swing.JPanel();
         previsaoTouro1 = new javax.swing.JLabel();
         jScrollPane49 = new javax.swing.JScrollPane();
-        txPrevisaoTouro1 = new javax.swing.JTextArea();
+        txPrevisaoTouro = new javax.swing.JTextArea();
         btnAtualizarPrevisoesTouro1 = new javax.swing.JButton();
-        areaCaracteristicas12 = new javax.swing.JPanel();
+        areaCaracteristicasTouro = new javax.swing.JPanel();
         tituloCaracteristicasTouro1 = new javax.swing.JLabel();
         pForteTouro1 = new javax.swing.JLabel();
         pMelhorarTouro1 = new javax.swing.JLabel();
@@ -135,10 +373,10 @@ public class Signos extends javax.swing.JFrame {
         tfSaudeTouro1 = new javax.swing.JTextField();
         tfSorteTouro1 = new javax.swing.JTextField();
         tfAmorTouro1 = new javax.swing.JTextField();
-        areaMensagem12 = new javax.swing.JPanel();
+        areaMensagemTouro = new javax.swing.JPanel();
         tituloMensagemTouro1 = new javax.swing.JLabel();
         jScrollPane52 = new javax.swing.JScrollPane();
-        txMensagemdoTouro1 = new javax.swing.JTextArea();
+        txMensagemdoTouro = new javax.swing.JTextArea();
         btnCopiarMensagemTouro1 = new javax.swing.JButton();
         imagemfundotouro = new javax.swing.JLabel();
         gemeos = new javax.swing.JPanel();
@@ -277,7 +515,7 @@ public class Signos extends javax.swing.JFrame {
         txPrevisaoVirgem = new javax.swing.JTextArea();
         btnAtualizarPrevisoesVirgem = new javax.swing.JButton();
         areaInformacoesVirgem = new javax.swing.JPanel();
-        imgSigno6 = new javax.swing.JLabel();
+        imgSignoVirgem = new javax.swing.JLabel();
         tituloCaracteristicaVirgem = new javax.swing.JLabel();
         periodoVirgem = new javax.swing.JLabel();
         elementoVirgem = new javax.swing.JLabel();
@@ -315,7 +553,7 @@ public class Signos extends javax.swing.JFrame {
         fundoimagemvirgem = new javax.swing.JLabel();
         libra = new javax.swing.JPanel();
         areaInformacoesLibra = new javax.swing.JPanel();
-        imgSigno7 = new javax.swing.JLabel();
+        imgSignoLibra = new javax.swing.JLabel();
         tituloLibra = new javax.swing.JLabel();
         periodoLibra = new javax.swing.JLabel();
         elementoLibra = new javax.swing.JLabel();
@@ -939,9 +1177,52 @@ public class Signos extends javax.swing.JFrame {
         txMensagemdoTouro3 = new javax.swing.JTextArea();
         btnCopiarMensagemTouro3 = new javax.swing.JButton();
         fundoimagempeixes1 = new javax.swing.JLabel();
+        iscorpiao = new javax.swing.JPanel();
+        areaInformacoesEscorpiao = new javax.swing.JPanel();
+        imgSignoEscorpiao = new javax.swing.JLabel();
+        tituloEscorpiao = new javax.swing.JLabel();
+        periodoEscorpiao = new javax.swing.JLabel();
+        elementoEscorpiao = new javax.swing.JLabel();
+        planetaEscorpiao = new javax.swing.JLabel();
+        corEscorpiao = new javax.swing.JLabel();
+        numeroEscorpiao = new javax.swing.JLabel();
+        tfPeriodoEscorpiao = new javax.swing.JTextField();
+        tfElementoEscorpiao = new javax.swing.JTextField();
+        tfPlanetaEscorpiao = new javax.swing.JTextField();
+        tfCorEscorpiao = new javax.swing.JTextField();
+        tfNumeroEscorpiao = new javax.swing.JTextField();
+        areaCaracteristicasEscorpiao = new javax.swing.JPanel();
+        tituloCaracteristicasEscorpiao = new javax.swing.JLabel();
+        pFortesEscorpiao = new javax.swing.JLabel();
+        pMelhorarEscorpiao = new javax.swing.JLabel();
+        jScrollPane97 = new javax.swing.JScrollPane();
+        tfPFortesEscorpiao = new javax.swing.JTextArea();
+        jScrollPane98 = new javax.swing.JScrollPane();
+        txpMelhorarEscorpiao = new javax.swing.JTextArea();
+        areaPrevisoesEscorpiao = new javax.swing.JPanel();
+        previsaoEscorpiao = new javax.swing.JLabel();
+        jScrollPane99 = new javax.swing.JScrollPane();
+        txPrevisaoEscorpiao = new javax.swing.JTextArea();
+        btnAtualizarPrevisoesEscorpiao = new javax.swing.JButton();
+        areaEnergiaEscorpiao = new javax.swing.JPanel();
+        tituloEnergiaEscorpiao = new javax.swing.JLabel();
+        amorEscorpiao = new javax.swing.JLabel();
+        trabalhoEscorpiao = new javax.swing.JLabel();
+        saudeEscorpiao = new javax.swing.JLabel();
+        sorteEscorpiao = new javax.swing.JLabel();
+        tfAmorEscorpiao = new javax.swing.JTextField();
+        tfTrabalhoEscorpiao = new javax.swing.JTextField();
+        tfSaudeEscorpiao = new javax.swing.JTextField();
+        tfSorteEscorpiao = new javax.swing.JTextField();
+        areaMensagemEscoripiao = new javax.swing.JPanel();
+        tituloMensagemEscorpiao = new javax.swing.JLabel();
+        jScrollPane100 = new javax.swing.JScrollPane();
+        txMensagemEscorpiao = new javax.swing.JTextArea();
+        btnCopiarMensagemEscorpiao = new javax.swing.JButton();
+        fundoImagemEscorpiao = new javax.swing.JLabel();
         sagitario = new javax.swing.JPanel();
         areaInformacoesSagitario = new javax.swing.JPanel();
-        imgSigno9 = new javax.swing.JLabel();
+        imgSignoSagitario = new javax.swing.JLabel();
         tituloSagitario = new javax.swing.JLabel();
         periodoSagitario = new javax.swing.JLabel();
         elementoSagitario = new javax.swing.JLabel();
@@ -983,13 +1264,13 @@ public class Signos extends javax.swing.JFrame {
         btnCopiarMensagemSagitario = new javax.swing.JButton();
         fundoimagemsagitario = new javax.swing.JLabel();
         capricornio = new javax.swing.JPanel();
-        areaPrevisoes1 = new javax.swing.JPanel();
-        previsaoAries1 = new javax.swing.JLabel();
+        areaPrevisoesCapricornio = new javax.swing.JPanel();
+        previsaoCapricornio = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        txPrevisaoAries1 = new javax.swing.JTextArea();
-        btnAtualizarPrevisoesAries1 = new javax.swing.JButton();
+        txPrevisaoCapricornio = new javax.swing.JTextArea();
+        btnAtualizarPrevisoesCapricornio = new javax.swing.JButton();
         areaInformacoesCapricornio = new javax.swing.JPanel();
-        imgSigno1 = new javax.swing.JLabel();
+        imgSignoCapricornio = new javax.swing.JLabel();
         tituloCapricornio = new javax.swing.JLabel();
         periodoCapricornio = new javax.swing.JLabel();
         elementoCapricornio = new javax.swing.JLabel();
@@ -1009,107 +1290,107 @@ public class Signos extends javax.swing.JFrame {
         txPFortesCapricornio = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
         txpMelhorarCapricornio = new javax.swing.JTextArea();
-        areaEnergia1 = new javax.swing.JPanel();
-        tituloEnergiaAries1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        tfAmorAries1 = new javax.swing.JTextField();
-        tfTrabalhoAries1 = new javax.swing.JTextField();
-        tfSaudeAries1 = new javax.swing.JTextField();
-        tfSorteAries1 = new javax.swing.JTextField();
-        areaMensagem1 = new javax.swing.JPanel();
-        tituloMensagemAries1 = new javax.swing.JLabel();
+        areaEnergiaCapricornio = new javax.swing.JPanel();
+        tituloEnergiaCapricornio = new javax.swing.JLabel();
+        amorCapricornio = new javax.swing.JLabel();
+        trabalhoCapricornio = new javax.swing.JLabel();
+        saudeCapricornio = new javax.swing.JLabel();
+        sorteCapricornio = new javax.swing.JLabel();
+        tfAmorCapricornio = new javax.swing.JTextField();
+        tfTrabalhoCapricornio = new javax.swing.JTextField();
+        tfSaudeCapricornio = new javax.swing.JTextField();
+        tfSorteCapricornio = new javax.swing.JTextField();
+        areaMensagemCapricornio = new javax.swing.JPanel();
+        tituloMensagemCapricornio = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        btnCopiarMensagemAries1 = new javax.swing.JButton();
+        txMensagemCapricornio = new javax.swing.JTextArea();
+        btnCopiarMensagemCapricornio = new javax.swing.JButton();
         fundoimagemcapricornio = new javax.swing.JLabel();
         aquario = new javax.swing.JPanel();
-        areaPrevisoes10 = new javax.swing.JPanel();
-        previsaoAries10 = new javax.swing.JLabel();
+        areaPrevisoesAquario = new javax.swing.JPanel();
+        previsaoAquario = new javax.swing.JLabel();
         jScrollPane41 = new javax.swing.JScrollPane();
-        txPrevisaoAries10 = new javax.swing.JTextArea();
-        btnAtualizarPrevisoesAries10 = new javax.swing.JButton();
-        areaInformacoes10 = new javax.swing.JPanel();
-        imgSigno10 = new javax.swing.JLabel();
-        tituloAries10 = new javax.swing.JLabel();
-        periodoAries10 = new javax.swing.JLabel();
-        elementoAries10 = new javax.swing.JLabel();
-        planetaAries10 = new javax.swing.JLabel();
-        corAries10 = new javax.swing.JLabel();
-        numeroAries10 = new javax.swing.JLabel();
-        tfPeriodoAries10 = new javax.swing.JTextField();
-        tfElementoAries10 = new javax.swing.JTextField();
-        tfPlanetaAries10 = new javax.swing.JTextField();
-        tfCorAries10 = new javax.swing.JTextField();
-        tfNumeroAries10 = new javax.swing.JTextField();
-        areaCaracteristicas10 = new javax.swing.JPanel();
-        tituloCaracteristicas10 = new javax.swing.JLabel();
-        pForesAries10 = new javax.swing.JLabel();
-        pMelhorarAries10 = new javax.swing.JLabel();
+        txPrevisaoAquario = new javax.swing.JTextArea();
+        btnAtualizarPrevisoesAquario = new javax.swing.JButton();
+        areaInformacoesAquario = new javax.swing.JPanel();
+        imgSignoAquario = new javax.swing.JLabel();
+        tituloAquario = new javax.swing.JLabel();
+        periodoAquario = new javax.swing.JLabel();
+        elementoAquario = new javax.swing.JLabel();
+        planetaAquario = new javax.swing.JLabel();
+        corAquario = new javax.swing.JLabel();
+        numeroAquario = new javax.swing.JLabel();
+        tfPeriodoAquario = new javax.swing.JTextField();
+        tfElementoAquario = new javax.swing.JTextField();
+        tfPlanetaAquario = new javax.swing.JTextField();
+        tfCorAquario = new javax.swing.JTextField();
+        tfNumeroAquario = new javax.swing.JTextField();
+        areaCaracteristicasAquario = new javax.swing.JPanel();
+        tituloCaracteristicasAquario = new javax.swing.JLabel();
+        pForesAquario = new javax.swing.JLabel();
+        pMelhorarAquario = new javax.swing.JLabel();
         jScrollPane42 = new javax.swing.JScrollPane();
-        txPFortesAries10 = new javax.swing.JTextArea();
+        txPFortesAquario = new javax.swing.JTextArea();
         jScrollPane43 = new javax.swing.JScrollPane();
-        txpMelhorarAries10 = new javax.swing.JTextArea();
-        areaEnergia10 = new javax.swing.JPanel();
-        tituloEnergiaAries10 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        tfAmorAries10 = new javax.swing.JTextField();
-        tfTrabalhoAries10 = new javax.swing.JTextField();
-        tfSaudeAries10 = new javax.swing.JTextField();
-        tfSorteAries10 = new javax.swing.JTextField();
-        areaMensagem10 = new javax.swing.JPanel();
-        tituloMensagemAries10 = new javax.swing.JLabel();
+        txpMelhorarAquario = new javax.swing.JTextArea();
+        areaEnergiaAquario = new javax.swing.JPanel();
+        tituloEnergiaAquario = new javax.swing.JLabel();
+        amorAquario = new javax.swing.JLabel();
+        trabalhoAquario = new javax.swing.JLabel();
+        saudeAquario = new javax.swing.JLabel();
+        sorteAquario = new javax.swing.JLabel();
+        tfAmorAquario = new javax.swing.JTextField();
+        tfTrabalhoAquario = new javax.swing.JTextField();
+        tfSaudeAquario = new javax.swing.JTextField();
+        tfSorteAquario = new javax.swing.JTextField();
+        areaMensagemAquario = new javax.swing.JPanel();
+        tituloMensagemAquario = new javax.swing.JLabel();
         jScrollPane44 = new javax.swing.JScrollPane();
-        jTextArea11 = new javax.swing.JTextArea();
-        btnCopiarMensagemAries10 = new javax.swing.JButton();
+        txMensagemAquario = new javax.swing.JTextArea();
+        btnCopiarMensagemAquario = new javax.swing.JButton();
         fundoimagemaquario = new javax.swing.JLabel();
         peixes = new javax.swing.JPanel();
-        areaPrevisoes11 = new javax.swing.JPanel();
-        previsaoTouro = new javax.swing.JLabel();
+        areaPrevisoesPeixe = new javax.swing.JPanel();
+        previsaoPeixe = new javax.swing.JLabel();
         jScrollPane45 = new javax.swing.JScrollPane();
-        txPrevisaoTouro = new javax.swing.JTextArea();
-        btnAtualizarPrevisoesTouro = new javax.swing.JButton();
-        areaInformacoes11 = new javax.swing.JPanel();
-        imgSigno11 = new javax.swing.JLabel();
-        tituloAries11 = new javax.swing.JLabel();
-        periodoTouro = new javax.swing.JLabel();
-        elementoTouro = new javax.swing.JLabel();
-        planetaTouro = new javax.swing.JLabel();
-        corTouro = new javax.swing.JLabel();
-        numeroTouro = new javax.swing.JLabel();
-        tfPeriodoTouro = new javax.swing.JTextField();
-        tfElementoTouro = new javax.swing.JTextField();
-        tfPlanetaTouro = new javax.swing.JTextField();
-        tfCorTouro = new javax.swing.JTextField();
-        tfNumeroTouro = new javax.swing.JTextField();
-        areaCaracteristicas11 = new javax.swing.JPanel();
-        tituloCaracteristicasTouro = new javax.swing.JLabel();
-        pForteTouro = new javax.swing.JLabel();
-        pMelhorarTouro = new javax.swing.JLabel();
+        txPrevisaoPeixes = new javax.swing.JTextArea();
+        btnAtualizarPrevisoesPeixe = new javax.swing.JButton();
+        areaInformacoesPeixe = new javax.swing.JPanel();
+        imgSignoPeixes = new javax.swing.JLabel();
+        tituloPeixe = new javax.swing.JLabel();
+        periodoPeixe = new javax.swing.JLabel();
+        elementoPeixe = new javax.swing.JLabel();
+        planetaPeixe = new javax.swing.JLabel();
+        corPeixe = new javax.swing.JLabel();
+        numeroPeixe = new javax.swing.JLabel();
+        tfPeriodoPeixe = new javax.swing.JTextField();
+        tfElementoPeixe = new javax.swing.JTextField();
+        tfPlanetaPeixe = new javax.swing.JTextField();
+        tfCorPeixe = new javax.swing.JTextField();
+        tfNumeroPeixe = new javax.swing.JTextField();
+        areaCaracteristicasPeixe = new javax.swing.JPanel();
+        tituloCaracteristicasPeixe = new javax.swing.JLabel();
+        pFortePeixe = new javax.swing.JLabel();
+        pMelhorarPeixe = new javax.swing.JLabel();
         jScrollPane46 = new javax.swing.JScrollPane();
-        txPForteTouro = new javax.swing.JTextArea();
+        txPFortePeixe = new javax.swing.JTextArea();
         jScrollPane47 = new javax.swing.JScrollPane();
-        txpMelhorarTouro = new javax.swing.JTextArea();
-        areaEnergia11 = new javax.swing.JPanel();
-        tituloEnergiaTouro = new javax.swing.JLabel();
-        amorTouro = new javax.swing.JLabel();
-        tabalhoTouro = new javax.swing.JLabel();
-        saude = new javax.swing.JLabel();
-        sorteTouro = new javax.swing.JLabel();
-        tfTrabalhoTouro = new javax.swing.JTextField();
-        tfSaudeTouro = new javax.swing.JTextField();
-        tfSorteTouro = new javax.swing.JTextField();
-        tfAmorTouro = new javax.swing.JTextField();
-        areaMensagem11 = new javax.swing.JPanel();
-        tituloMensagemTouro = new javax.swing.JLabel();
+        txpMelhorarPeixe = new javax.swing.JTextArea();
+        areaEnergiaPeixe = new javax.swing.JPanel();
+        tituloEnergiaPeixe = new javax.swing.JLabel();
+        amorPeixe = new javax.swing.JLabel();
+        tabalhoPeixe = new javax.swing.JLabel();
+        saudePeixe = new javax.swing.JLabel();
+        sortePeixe = new javax.swing.JLabel();
+        tfTrabalhoPeixe = new javax.swing.JTextField();
+        tfSaudePeixe = new javax.swing.JTextField();
+        tfSortePeixe = new javax.swing.JTextField();
+        tfAmorPeixe = new javax.swing.JTextField();
+        areaMensagemPeixe = new javax.swing.JPanel();
+        tituloMensagemPeixe = new javax.swing.JLabel();
         jScrollPane48 = new javax.swing.JScrollPane();
-        txMensagemdoTouro = new javax.swing.JTextArea();
-        btnCopiarMensagemTouro = new javax.swing.JButton();
+        txMensagemdoPeixe = new javax.swing.JTextArea();
+        btnCopiarMensagemPeixe = new javax.swing.JButton();
         fundoimagempeixes = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -1329,7 +1610,7 @@ public class Signos extends javax.swing.JFrame {
 
         aries.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        imgSigno.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\aries.jpg")); // NOI18N
+        imgSignoAries.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\aries.jpg")); // NOI18N
 
         tituloAries.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tituloAries.setText("Áries");
@@ -1349,133 +1630,142 @@ public class Signos extends javax.swing.JFrame {
         numeroAries.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroAries.setText("Numero Da Sorte:");
 
-        javax.swing.GroupLayout areaInformacoesLayout = new javax.swing.GroupLayout(areaInformacoes);
-        areaInformacoes.setLayout(areaInformacoesLayout);
-        areaInformacoesLayout.setHorizontalGroup(
-            areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(areaInformacoesLayout.createSequentialGroup()
-                .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaInformacoesLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(periodoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(tfPeriodoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(areaInformacoesLayout.createSequentialGroup()
-                            .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(areaInformacoesLayout.createSequentialGroup()
+        tfPeriodoAries.setText("21/03 a 19/04");
+
+        tfElementoAries.setText("Fogo");
+
+        tfPlanetaAries.setText("Marte");
+
+        tfCorAries.setText("Vermelho");
+
+        tfNumeroAries.setText("9");
+
+        javax.swing.GroupLayout areaInformacoesAriesLayout = new javax.swing.GroupLayout(areaInformacoesAries);
+        areaInformacoesAries.setLayout(areaInformacoesAriesLayout);
+        areaInformacoesAriesLayout.setHorizontalGroup(
+            areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(tituloAries, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
+                .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
+                            .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
                                     .addContainerGap()
                                     .addComponent(planetaAries, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(numeroAries, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tfPlanetaAries)
-                                .addGroup(areaInformacoesLayout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(tfNumeroAries, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoesLayout.createSequentialGroup()
+                            .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tfPlanetaAries, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tfNumeroAries, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
                             .addContainerGap()
-                            .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(areaInformacoesLayout.createSequentialGroup()
-                                    .addComponent(elementoAries)
-                                    .addGap(32, 32, 32)
-                                    .addComponent(tfElementoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(areaInformacoesLayout.createSequentialGroup()
+                            .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
                                     .addComponent(corAries, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(tfCorAries, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(areaInformacoesLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(tituloAries, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tfCorAries, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
+                                    .addComponent(elementoAries)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tfElementoAries))
+                                .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
+                                    .addComponent(periodoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tfPeriodoAries)))))
+                    .addComponent(imgSignoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 2, Short.MAX_VALUE))
         );
-        areaInformacoesLayout.setVerticalGroup(
-            areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaInformacoesLayout.createSequentialGroup()
-                .addComponent(imgSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+        areaInformacoesAriesLayout.setVerticalGroup(
+            areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaInformacoesAriesLayout.createSequentialGroup()
+                .addComponent(imgSignoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tituloAries, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(periodoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfPeriodoAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(elementoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfElementoAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(planetaAries, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfPlanetaAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(corAries, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(tfCorAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(areaInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(numeroAries, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfNumeroAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        aries.add(areaInformacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
+        aries.add(areaInformacoesAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
 
-        tituloCaracteristicas.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        tituloCaracteristicas.setText("Características");
+        tituloCaracteristicasAries.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        tituloCaracteristicasAries.setText("Características");
 
-        pForesAries.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        pForesAries.setText("Pontos Fortes:");
+        pFortesAries.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pFortesAries.setText("Pontos Fortes:");
 
         pMelhorarAries.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         pMelhorarAries.setText("Pontos a Melhorar:");
 
-        txPFortesAries.setColumns(20);
-        txPFortesAries.setRows(5);
-        jScrollPane2.setViewportView(txPFortesAries);
+        tfPFortesAries.setColumns(20);
+        tfPFortesAries.setRows(5);
+        tfPFortesAries.setText("Coragem, determinação e iniciativa.\nCostumam ser energéticas, confiantes,\nindependentes e sinceras, além de\ngostarem de desafios, novidades e de\ntomar a frente das situações.");
+        jScrollPane2.setViewportView(tfPFortesAries);
 
         txpMelhorarAries.setColumns(20);
         txpMelhorarAries.setRows(5);
+        txpMelhorarAries.setText("Impaciência, impulsividade e teimosia.\nTambém pode aprender a pensar antes \nde agir, controlar a irritação, ouvir mais \nos outros e ter mais paciência quando\n as coisas não acontecem como gostaria.");
         jScrollPane3.setViewportView(txpMelhorarAries);
 
-        javax.swing.GroupLayout areaCaracteristicasLayout = new javax.swing.GroupLayout(areaCaracteristicas);
-        areaCaracteristicas.setLayout(areaCaracteristicasLayout);
-        areaCaracteristicasLayout.setHorizontalGroup(
-            areaCaracteristicasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicasLayout.createSequentialGroup()
-                .addGroup(areaCaracteristicasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaCaracteristicasLayout.createSequentialGroup()
+        javax.swing.GroupLayout areaCaracteristicasAriesLayout = new javax.swing.GroupLayout(areaCaracteristicasAries);
+        areaCaracteristicasAries.setLayout(areaCaracteristicasAriesLayout);
+        areaCaracteristicasAriesLayout.setHorizontalGroup(
+            areaCaracteristicasAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasAriesLayout.createSequentialGroup()
+                .addGroup(areaCaracteristicasAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaCaracteristicasAriesLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addGroup(areaCaracteristicasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pForesAries, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(areaCaracteristicasAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pFortesAries, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pMelhorarAries, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(areaCaracteristicasLayout.createSequentialGroup()
+                    .addGroup(areaCaracteristicasAriesLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(tituloCaracteristicas, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tituloCaracteristicasAries, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
-        areaCaracteristicasLayout.setVerticalGroup(
-            areaCaracteristicasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicasLayout.createSequentialGroup()
+        areaCaracteristicasAriesLayout.setVerticalGroup(
+            areaCaracteristicasAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasAriesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloCaracteristicas, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloCaracteristicasAries, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pForesAries, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pFortesAries, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pMelhorarAries)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        aries.add(areaCaracteristicas, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
+        aries.add(areaCaracteristicasAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
 
-        areaPrevisoes.setForeground(new java.awt.Color(255, 255, 255));
+        areaPrevisoesAries.setForeground(new java.awt.Color(255, 255, 255));
 
         previsaoAries.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         previsaoAries.setText("PREVISÃO DO DIA:");
@@ -1489,24 +1779,24 @@ public class Signos extends javax.swing.JFrame {
         btnAtualizarPrevisoesAries.setForeground(new java.awt.Color(255, 255, 255));
         btnAtualizarPrevisoesAries.setText("Atualizar Previsão");
 
-        javax.swing.GroupLayout areaPrevisoesLayout = new javax.swing.GroupLayout(areaPrevisoes);
-        areaPrevisoes.setLayout(areaPrevisoesLayout);
-        areaPrevisoesLayout.setHorizontalGroup(
-            areaPrevisoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoesLayout.createSequentialGroup()
+        javax.swing.GroupLayout areaPrevisoesAriesLayout = new javax.swing.GroupLayout(areaPrevisoesAries);
+        areaPrevisoesAries.setLayout(areaPrevisoesAriesLayout);
+        areaPrevisoesAriesLayout.setHorizontalGroup(
+            areaPrevisoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesAriesLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(areaPrevisoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaPrevisoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(areaPrevisoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaPrevisoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(btnAtualizarPrevisoesAries)
-                        .addGroup(areaPrevisoesLayout.createSequentialGroup()
+                        .addGroup(areaPrevisoesAriesLayout.createSequentialGroup()
                             .addComponent(previsaoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(38, 38, 38)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
-        areaPrevisoesLayout.setVerticalGroup(
-            areaPrevisoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoesLayout.createSequentialGroup()
+        areaPrevisoesAriesLayout.setVerticalGroup(
+            areaPrevisoesAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesAriesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(previsaoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1516,97 +1806,108 @@ public class Signos extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        aries.add(areaPrevisoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
+        aries.add(areaPrevisoesAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
 
         tituloEnergiaAries.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloEnergiaAries.setText("Energia Do Dia");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Amor:");
+        amorAries.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        amorAries.setText("Amor:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Trabalho:");
+        trabalhoAries.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        trabalhoAries.setText("Trabalho:");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel5.setText("Saúde:");
+        saudeAries.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        saudeAries.setText("Saúde:");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel6.setText("Sorte:");
+        sorteAries.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        sorteAries.setText("Sorte:");
 
+        tfAmorAries.setText("85%");
+
+        tfTrabalhoAries.setText("90%");
+        tfTrabalhoAries.addActionListener(this::tfTrabalhoAriesActionPerformed);
+
+        tfSaudeAries.setText("75%");
         tfSaudeAries.addActionListener(this::tfSaudeAriesActionPerformed);
 
-        javax.swing.GroupLayout areaEnergiaLayout = new javax.swing.GroupLayout(areaEnergia);
-        areaEnergia.setLayout(areaEnergiaLayout);
-        areaEnergiaLayout.setHorizontalGroup(
-            areaEnergiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergiaLayout.createSequentialGroup()
+        tfSorteAries.setText("80%");
+
+        javax.swing.GroupLayout areaEnergiaAriesLayout = new javax.swing.GroupLayout(areaEnergiaAries);
+        areaEnergiaAries.setLayout(areaEnergiaAriesLayout);
+        areaEnergiaAriesLayout.setHorizontalGroup(
+            areaEnergiaAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaAriesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(areaEnergiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaEnergiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tfSaudeAries, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-                        .addComponent(tfTrabalhoAries)
-                        .addComponent(tfAmorAries)
-                        .addComponent(tituloEnergiaAries, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfSorteAries, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4)
-                        .addComponent(jLabel3))
-                    .addComponent(jLabel6))
+                .addGroup(areaEnergiaAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfTrabalhoAries, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(saudeAries, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfSaudeAries, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sorteAries)
+                    .addComponent(tituloEnergiaAries, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amorAries)
+                    .addComponent(tfAmorAries, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(trabalhoAries)
+                    .addComponent(tfSorteAries, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
-        areaEnergiaLayout.setVerticalGroup(
-            areaEnergiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergiaLayout.createSequentialGroup()
+        areaEnergiaAriesLayout.setVerticalGroup(
+            areaEnergiaAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaAriesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloEnergiaAries)
-                .addGap(8, 8, 8)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfAmorAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tfTrabalhoAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfSaudeAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addGroup(areaEnergiaAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaEnergiaAriesLayout.createSequentialGroup()
+                        .addComponent(tituloEnergiaAries)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(amorAries)
+                        .addGap(2, 2, 2)
+                        .addComponent(tfAmorAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(trabalhoAries)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tfTrabalhoAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(saudeAries)
+                        .addGap(28, 28, 28))
+                    .addGroup(areaEnergiaAriesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(tfSaudeAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(4, 4, 4)
+                .addComponent(sorteAries)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfSorteAries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(108, 108, 108))
+                .addGap(82, 82, 82))
         );
 
-        aries.add(areaEnergia, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        aries.add(areaEnergiaAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 250));
 
         tituloMensagemAries.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemAries.setText("Mensagem Do Dia");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane4.setViewportView(jTextArea1);
+        txMensagemAries.setColumns(20);
+        txMensagemAries.setRows(5);
+        jScrollPane4.setViewportView(txMensagemAries);
 
         btnCopiarMensagemAries.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnCopiarMensagemAries.setText("Copiar Mensagem");
 
-        javax.swing.GroupLayout areaMensagemLayout = new javax.swing.GroupLayout(areaMensagem);
-        areaMensagem.setLayout(areaMensagemLayout);
-        areaMensagemLayout.setHorizontalGroup(
-            areaMensagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemLayout.createSequentialGroup()
+        javax.swing.GroupLayout areaMensagemAriesLayout = new javax.swing.GroupLayout(areaMensagemAries);
+        areaMensagemAries.setLayout(areaMensagemAriesLayout);
+        areaMensagemAriesLayout.setHorizontalGroup(
+            areaMensagemAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemAriesLayout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
-                .addGroup(areaMensagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(areaMensagemAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tituloMensagemAries, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagemLayout.createSequentialGroup()
+                    .addGroup(areaMensagemAriesLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(btnCopiarMensagemAries)))
                 .addGap(17, 17, 17))
         );
-        areaMensagemLayout.setVerticalGroup(
-            areaMensagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaMensagemLayout.createSequentialGroup()
+        areaMensagemAriesLayout.setVerticalGroup(
+            areaMensagemAriesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemAriesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tituloMensagemAries, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
@@ -1616,7 +1917,7 @@ public class Signos extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        aries.add(areaMensagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        aries.add(areaMensagemAries, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
 
         imagemfundoaries.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         aries.add(imagemfundoaries, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -1625,7 +1926,7 @@ public class Signos extends javax.swing.JFrame {
 
         touro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        imgSigno12.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\touro.jpg")); // NOI18N
+        imgSignoTouro.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\touro.jpg")); // NOI18N
 
         tituloAries12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tituloAries12.setText("Touro");
@@ -1645,111 +1946,121 @@ public class Signos extends javax.swing.JFrame {
         numeroTouro1.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroTouro1.setText("Numero Da Sorte:");
 
-        javax.swing.GroupLayout areaInformacoes12Layout = new javax.swing.GroupLayout(areaInformacoes12);
-        areaInformacoes12.setLayout(areaInformacoes12Layout);
-        areaInformacoes12Layout.setHorizontalGroup(
-            areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(areaInformacoes12Layout.createSequentialGroup()
-                .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaInformacoes12Layout.createSequentialGroup()
+        tfPeriodoTouro1.setText("20/04 a 20/05");
+
+        tfElementoTouro1.setText("Terra");
+
+        tfPlanetaTouro1.setText("Vênus");
+
+        tfCorTouro1.setText("Verde e Rosa");
+
+        tfNumeroTouro1.setText("2");
+
+        javax.swing.GroupLayout areaInformacoesTouroLayout = new javax.swing.GroupLayout(areaInformacoesTouro);
+        areaInformacoesTouro.setLayout(areaInformacoesTouroLayout);
+        areaInformacoesTouroLayout.setHorizontalGroup(
+            areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(imgSignoTouro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
+                .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(periodoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
                         .addComponent(tfPeriodoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(areaInformacoes12Layout.createSequentialGroup()
-                            .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(areaInformacoes12Layout.createSequentialGroup()
+                    .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
+                            .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
                                     .addContainerGap()
                                     .addComponent(planetaTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(numeroTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(tfPlanetaTouro1)
-                                .addGroup(areaInformacoes12Layout.createSequentialGroup()
+                                .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
                                     .addGap(0, 0, Short.MAX_VALUE)
                                     .addComponent(tfNumeroTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoes12Layout.createSequentialGroup()
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoesTouroLayout.createSequentialGroup()
                             .addContainerGap()
-                            .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(areaInformacoes12Layout.createSequentialGroup()
+                            .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
                                     .addComponent(elementoTouro1)
                                     .addGap(32, 32, 32)
                                     .addComponent(tfElementoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(areaInformacoes12Layout.createSequentialGroup()
+                                .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
                                     .addComponent(corTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(tfCorTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(areaInformacoes12Layout.createSequentialGroup()
+            .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(tituloAries12, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        areaInformacoes12Layout.setVerticalGroup(
-            areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaInformacoes12Layout.createSequentialGroup()
-                .addComponent(imgSigno12, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+        areaInformacoesTouroLayout.setVerticalGroup(
+            areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaInformacoesTouroLayout.createSequentialGroup()
+                .addComponent(imgSignoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tituloAries12, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(periodoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfPeriodoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(elementoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfElementoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(planetaTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfPlanetaTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(corTouro1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(tfCorTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(areaInformacoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(areaInformacoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(numeroTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfNumeroTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        touro.add(areaInformacoes12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
+        touro.add(areaInformacoesTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
 
-        areaPrevisoes12.setForeground(new java.awt.Color(255, 255, 255));
+        areaPrevisoesTouro.setForeground(new java.awt.Color(255, 255, 255));
 
         previsaoTouro1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         previsaoTouro1.setText("PREVISÃO DO DIA:");
 
-        txPrevisaoTouro1.setColumns(20);
-        txPrevisaoTouro1.setRows(5);
-        jScrollPane49.setViewportView(txPrevisaoTouro1);
+        txPrevisaoTouro.setColumns(20);
+        txPrevisaoTouro.setRows(5);
+        jScrollPane49.setViewportView(txPrevisaoTouro);
 
         btnAtualizarPrevisoesTouro1.setBackground(new java.awt.Color(102, 102, 255));
         btnAtualizarPrevisoesTouro1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         btnAtualizarPrevisoesTouro1.setForeground(new java.awt.Color(255, 255, 255));
         btnAtualizarPrevisoesTouro1.setText("Atualizar Previsão");
 
-        javax.swing.GroupLayout areaPrevisoes12Layout = new javax.swing.GroupLayout(areaPrevisoes12);
-        areaPrevisoes12.setLayout(areaPrevisoes12Layout);
-        areaPrevisoes12Layout.setHorizontalGroup(
-            areaPrevisoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes12Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaPrevisoesTouroLayout = new javax.swing.GroupLayout(areaPrevisoesTouro);
+        areaPrevisoesTouro.setLayout(areaPrevisoesTouroLayout);
+        areaPrevisoesTouroLayout.setHorizontalGroup(
+            areaPrevisoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesTouroLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(areaPrevisoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaPrevisoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(areaPrevisoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaPrevisoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(btnAtualizarPrevisoesTouro1)
-                        .addGroup(areaPrevisoes12Layout.createSequentialGroup()
+                        .addGroup(areaPrevisoesTouroLayout.createSequentialGroup()
                             .addComponent(previsaoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(38, 38, 38)))
                     .addComponent(jScrollPane49, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
-        areaPrevisoes12Layout.setVerticalGroup(
-            areaPrevisoes12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes12Layout.createSequentialGroup()
+        areaPrevisoesTouroLayout.setVerticalGroup(
+            areaPrevisoesTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesTouroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(previsaoTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1759,7 +2070,7 @@ public class Signos extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        touro.add(areaPrevisoes12, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
+        touro.add(areaPrevisoesTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
 
         tituloCaracteristicasTouro1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         tituloCaracteristicasTouro1.setText("Características");
@@ -1772,33 +2083,35 @@ public class Signos extends javax.swing.JFrame {
 
         txPForteTouro1.setColumns(20);
         txPForteTouro1.setRows(5);
+        txPForteTouro1.setText("Leal, paciente e determinado. \nTambém costuma ser confiável,\nresponsável, persistente e prático, \nvalorizando a estabilidade e as pessoas\nque ama.");
         jScrollPane50.setViewportView(txPForteTouro1);
 
         txpMelhorarTouro1.setColumns(20);
         txpMelhorarTouro1.setRows(5);
+        txpMelhorarTouro1.setText("Teimosia, possessividade e resistência\na mudanças. Também pode desenvolver \nmais flexibilidade, paciência e abertura\npara novas ideias.");
         jScrollPane51.setViewportView(txpMelhorarTouro1);
 
-        javax.swing.GroupLayout areaCaracteristicas12Layout = new javax.swing.GroupLayout(areaCaracteristicas12);
-        areaCaracteristicas12.setLayout(areaCaracteristicas12Layout);
-        areaCaracteristicas12Layout.setHorizontalGroup(
-            areaCaracteristicas12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicas12Layout.createSequentialGroup()
-                .addGroup(areaCaracteristicas12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaCaracteristicas12Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaCaracteristicasTouroLayout = new javax.swing.GroupLayout(areaCaracteristicasTouro);
+        areaCaracteristicasTouro.setLayout(areaCaracteristicasTouroLayout);
+        areaCaracteristicasTouroLayout.setHorizontalGroup(
+            areaCaracteristicasTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasTouroLayout.createSequentialGroup()
+                .addGroup(areaCaracteristicasTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaCaracteristicasTouroLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addGroup(areaCaracteristicas12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(areaCaracteristicasTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pMelhorarTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pForteTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(areaCaracteristicas12Layout.createSequentialGroup()
+                    .addGroup(areaCaracteristicasTouroLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(tituloCaracteristicasTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
-        areaCaracteristicas12Layout.setVerticalGroup(
-            areaCaracteristicas12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicas12Layout.createSequentialGroup()
+        areaCaracteristicasTouroLayout.setVerticalGroup(
+            areaCaracteristicasTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasTouroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tituloCaracteristicasTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1809,10 +2122,10 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarTouro1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        touro.add(areaCaracteristicas12, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
+        touro.add(areaCaracteristicasTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
 
         tituloEnergiaTouro1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloEnergiaTouro1.setText("Energia Do Dia");
@@ -1829,10 +2142,15 @@ public class Signos extends javax.swing.JFrame {
         sorteTouro1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sorteTouro1.setText("Sorte:");
 
+        tfTrabalhoTouro1.setText("95%");
+
+        tfSaudeTouro1.setText("85%");
         tfSaudeTouro1.addActionListener(this::tfSaudeTouro1ActionPerformed);
 
+        tfSorteTouro1.setText("80%");
         tfSorteTouro1.addActionListener(this::tfSorteTouro1ActionPerformed);
 
+        tfAmorTouro1.setText("90%");
         tfAmorTouro1.addActionListener(this::tfAmorTouro1ActionPerformed);
 
         javax.swing.GroupLayout areaEnergia12Layout = new javax.swing.GroupLayout(areaEnergia12);
@@ -1841,21 +2159,17 @@ public class Signos extends javax.swing.JFrame {
             areaEnergia12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaEnergia12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(areaEnergia12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfAmorTouro1)
-                    .addGroup(areaEnergia12Layout.createSequentialGroup()
-                        .addGroup(areaEnergia12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(areaEnergia12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(tfSaudeTouro1, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-                                .addComponent(tfTrabalhoTouro1)
-                                .addComponent(tituloEnergiaTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tfSorteTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(saude1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tabalhoTouro1)
-                                .addComponent(amorTouro1))
-                            .addComponent(sorteTouro1))
-                        .addGap(0, 10, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGroup(areaEnergia12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfAmorTouro1, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                    .addComponent(tfSaudeTouro1, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                    .addComponent(tfTrabalhoTouro1)
+                    .addComponent(tituloEnergiaTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(saude1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tabalhoTouro1)
+                    .addComponent(amorTouro1)
+                    .addComponent(tfSorteTouro1)
+                    .addComponent(sorteTouro1))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         areaEnergia12Layout.setVerticalGroup(
             areaEnergia12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1881,45 +2195,47 @@ public class Signos extends javax.swing.JFrame {
                 .addGap(120, 120, 120))
         );
 
-        touro.add(areaEnergia12, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        touro.add(areaEnergia12, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
         tituloMensagemTouro1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemTouro1.setText("Mensagem Do Dia");
 
-        txMensagemdoTouro1.setColumns(20);
-        txMensagemdoTouro1.setRows(5);
-        jScrollPane52.setViewportView(txMensagemdoTouro1);
+        txMensagemdoTouro.setColumns(20);
+        txMensagemdoTouro.setRows(5);
+        jScrollPane52.setViewportView(txMensagemdoTouro);
 
         btnCopiarMensagemTouro1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnCopiarMensagemTouro1.setText("Copiar Mensagem");
 
-        javax.swing.GroupLayout areaMensagem12Layout = new javax.swing.GroupLayout(areaMensagem12);
-        areaMensagem12.setLayout(areaMensagem12Layout);
-        areaMensagem12Layout.setHorizontalGroup(
-            areaMensagem12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagem12Layout.createSequentialGroup()
-                .addContainerGap(62, Short.MAX_VALUE)
-                .addGroup(areaMensagem12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane52, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tituloMensagemTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagem12Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnCopiarMensagemTouro1)))
-                .addGap(17, 17, 17))
+        javax.swing.GroupLayout areaMensagemTouroLayout = new javax.swing.GroupLayout(areaMensagemTouro);
+        areaMensagemTouro.setLayout(areaMensagemTouroLayout);
+        areaMensagemTouroLayout.setHorizontalGroup(
+            areaMensagemTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemTouroLayout.createSequentialGroup()
+                .addGroup(areaMensagemTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaMensagemTouroLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(btnCopiarMensagemTouro1))
+                    .addGroup(areaMensagemTouroLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(areaMensagemTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tituloMensagemTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane52, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
-        areaMensagem12Layout.setVerticalGroup(
-            areaMensagem12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaMensagem12Layout.createSequentialGroup()
-                .addContainerGap()
+        areaMensagemTouroLayout.setVerticalGroup(
+            areaMensagemTouroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemTouroLayout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addComponent(tituloMensagemTouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane52, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnCopiarMensagemTouro1)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
 
-        touro.add(areaMensagem12, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        touro.add(areaMensagemTouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 260));
 
         imagemfundotouro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         touro.add(imagemfundotouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -1974,7 +2290,7 @@ public class Signos extends javax.swing.JFrame {
         imgSignoGemeos.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\Gemeos.jpg")); // NOI18N
 
         tituloGemeos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloGemeos.setText("Áries");
+        tituloGemeos.setText("Gêmeos");
 
         periodoGemeos.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         periodoGemeos.setText("Periodo:");
@@ -1990,6 +2306,16 @@ public class Signos extends javax.swing.JFrame {
 
         numeroGemeos.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroGemeos.setText("Numero Da Sorte:");
+
+        tfPeriodoGemeos.setText("21/05 a 20/06");
+
+        tfElementoGemeos.setText("Ar");
+
+        tfPlanetaGemeos.setText("Mercúrio");
+
+        tfCorGemeos.setText("Amarelo e verde-claro");
+
+        tfNumeroGemeos.setText("5, 7 e 14");
 
         javax.swing.GroupLayout areaInformacoesGemeosLayout = new javax.swing.GroupLayout(areaInformacoesGemeos);
         areaInformacoesGemeos.setLayout(areaInformacoesGemeosLayout);
@@ -2075,10 +2401,12 @@ public class Signos extends javax.swing.JFrame {
 
         txPFortesGemeos.setColumns(20);
         txPFortesGemeos.setRows(5);
+        txPFortesGemeos.setText("Comunicação, inteligência e curiosidade.\nTambém costuma ser descrito como\ncriativo, sociável, versátil e adaptável, \ncom facilidade para aprender coisas novas\ne conversar sobre diferentes assuntos.");
         jScrollPane14.setViewportView(txPFortesGemeos);
 
         txpMelhorarGemeos.setColumns(20);
         txpMelhorarGemeos.setRows(5);
+        txpMelhorarGemeos.setText("Inconstância, ansiedade e indecisão. \nTambém pode desenvolver mais paciência\nfoco e organização, evitando começar\nmuitas coisas ao mesmo tempo e não \nterminá-las.");
         jScrollPane15.setViewportView(txpMelhorarGemeos);
 
         javax.swing.GroupLayout areaCaracteristicasGemeosLayout = new javax.swing.GroupLayout(areaCaracteristicasGemeos);
@@ -2112,10 +2440,10 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarGemeos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        gemeos.add(areaCaracteristicasGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
+        gemeos.add(areaCaracteristicasGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, -1));
 
         tituloEnergiaGemeos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloEnergiaGemeos.setText("Energia Do Dia");
@@ -2132,6 +2460,12 @@ public class Signos extends javax.swing.JFrame {
         sorteGemeos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sorteGemeos.setText("Sorte:");
 
+        tfAmorGemeos.setText("80%");
+        tfAmorGemeos.addActionListener(this::tfAmorGemeosActionPerformed);
+
+        tfTrabalhoGemeos.setText("85%");
+
+        tfSaudeGemeos.setText("80%");
         tfSaudeGemeos.addActionListener(this::tfSaudeGemeosActionPerformed);
 
         javax.swing.GroupLayout areaEnergiaGemeosLayout = new javax.swing.GroupLayout(areaEnergiaGemeos);
@@ -2146,10 +2480,10 @@ public class Signos extends javax.swing.JFrame {
                         .addComponent(tfTrabalhoGemeos)
                         .addComponent(tfAmorGemeos)
                         .addComponent(tituloEnergiaGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfSorteGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(saudeGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(trabalhoGemeos)
-                        .addComponent(amorGemeos))
+                        .addComponent(amorGemeos)
+                        .addComponent(tfSorteGemeos))
                     .addComponent(sorteGemeos))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -2162,22 +2496,22 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(amorGemeos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfAmorGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(trabalhoGemeos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addComponent(tfTrabalhoGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(saudeGemeos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfSaudeGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sorteGemeos)
-                .addGap(4, 4, 4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tfSaudeGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sorteGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tfSorteGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(108, 108, 108))
+                .addGap(36, 36, 36))
         );
 
-        gemeos.add(areaEnergiaGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        gemeos.add(areaEnergiaGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 300));
 
         tituloMensagemGemeos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemGemeos.setText("Mensagem Do Dia");
@@ -2195,27 +2529,28 @@ public class Signos extends javax.swing.JFrame {
             areaMensagemGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemGemeosLayout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
+                .addComponent(btnCopiarMensagemGemeos)
+                .addGap(95, 95, 95))
+            .addGroup(areaMensagemGemeosLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addGroup(areaMensagemGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tituloMensagemGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagemGemeosLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnCopiarMensagemGemeos)))
-                .addGap(17, 17, 17))
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         areaMensagemGemeosLayout.setVerticalGroup(
             areaMensagemGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaMensagemGemeosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(tituloMensagemGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnCopiarMensagemGemeos)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
 
-        gemeos.add(areaMensagemGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        gemeos.add(areaMensagemGemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 260));
 
         fundoimagemgemeos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         gemeos.add(fundoimagemgemeos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -2270,7 +2605,7 @@ public class Signos extends javax.swing.JFrame {
         imgSignoCancer.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\cancer.jpg")); // NOI18N
 
         tituloCancer.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloCancer.setText("Áries");
+        tituloCancer.setText("Câncer");
 
         periodoCancer.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         periodoCancer.setText("Periodo:");
@@ -2287,42 +2622,52 @@ public class Signos extends javax.swing.JFrame {
         numeroCancer.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroCancer.setText("Numero Da Sorte:");
 
+        tfPeriodoCancer.setText("21/06 a 22/07");
+
+        tfElementoCancer.setText("Água");
+
+        tfPlanetaCancer.setText("Lua");
+
+        tfCorCancer.setText("Branco e prata ");
+        tfCorCancer.addActionListener(this::tfCorCancerActionPerformed);
+
+        tfNumeroCancer.setText("2");
+
         javax.swing.GroupLayout areaInformacoesCancerLayout = new javax.swing.GroupLayout(areaInformacoesCancer);
         areaInformacoesCancer.setLayout(areaInformacoesCancerLayout);
         areaInformacoesCancerLayout.setHorizontalGroup(
             areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(imgSignoCancer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
-                .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaInformacoesCancerLayout.createSequentialGroup()
+                        .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(planetaCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(numeroCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfPlanetaCancer)
+                            .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(tfNumeroCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(periodoCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(tfPeriodoCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
-                            .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(planetaCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(numeroCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tfPlanetaCancer)
-                                .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(tfNumeroCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoesCancerLayout.createSequentialGroup()
-                            .addContainerGap()
+                        .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
+                                .addComponent(periodoCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(tfPeriodoCancer))
                             .addGroup(areaInformacoesCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
                                     .addComponent(elementoCancer)
-                                    .addGap(32, 32, 32)
-                                    .addComponent(tfElementoCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addComponent(tfElementoCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
                                     .addComponent(corCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(tfCorCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addGap(68, 68, 68)
+                                    .addComponent(tfCorCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(areaInformacoesCancerLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
@@ -2371,10 +2716,12 @@ public class Signos extends javax.swing.JFrame {
 
         txPFortesCancer.setColumns(20);
         txPFortesCancer.setRows(5);
+        txPFortesCancer.setText("Carinhoso, sensível e protetor. \nCostuma valorizar muito a família e as\namizades, sendo leal, acolhedor, intuitivo \ne atencioso com as pessoas que ama. \nTambém pode ter uma forte empatia e \nfacilidade para perceber os sentimentos \ndos outros.");
         jScrollPane18.setViewportView(txPFortesCancer);
 
         txpMelhorarCancer.setColumns(20);
         txpMelhorarCancer.setRows(5);
+        txpMelhorarCancer.setText("Sensibilidade excessiva, insegurança e \napego ao passado. Também pode aprende\na lidar melhor com as emoções, evitar \nguardar mágoas, confiar mais em si \nmesmo e comunicar o que sente com \nclareza.");
         jScrollPane19.setViewportView(txpMelhorarCancer);
 
         javax.swing.GroupLayout areaCaracteristicasCancerLayout = new javax.swing.GroupLayout(areaCaracteristicasCancer);
@@ -2393,7 +2740,7 @@ public class Signos extends javax.swing.JFrame {
                     .addGroup(areaCaracteristicasCancerLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(tituloCaracteristicasCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         areaCaracteristicasCancerLayout.setVerticalGroup(
             areaCaracteristicasCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2408,10 +2755,10 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarCancer)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        cancer.add(areaCaracteristicasCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
+        cancer.add(areaCaracteristicasCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, -1));
 
         tituloEnergiaCancer.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloEnergiaCancer.setText("Energia Do Dia");
@@ -2428,39 +2775,52 @@ public class Signos extends javax.swing.JFrame {
         sorteCancer.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sorteCancer.setText("Sorte:");
 
+        tfAmorCancer.setText("95%");
+        tfAmorCancer.addActionListener(this::tfAmorCancerActionPerformed);
+
+        tfTrabalhoCancer.setText("85%");
+        tfTrabalhoCancer.addActionListener(this::tfTrabalhoCancerActionPerformed);
+
+        tfSaudeCancer.setText("80%");
         tfSaudeCancer.addActionListener(this::tfSaudeCancerActionPerformed);
+
+        tfSorteCancer.setText("85%");
 
         javax.swing.GroupLayout areaEnergiaCancerLayout = new javax.swing.GroupLayout(areaEnergiaCancer);
         areaEnergiaCancer.setLayout(areaEnergiaCancerLayout);
         areaEnergiaCancerLayout.setHorizontalGroup(
             areaEnergiaCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaEnergiaCancerLayout.createSequentialGroup()
+                .addComponent(tfTrabalhoCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
+            .addGroup(areaEnergiaCancerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(areaEnergiaCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(areaEnergiaCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(tfSaudeCancer, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-                        .addComponent(tfTrabalhoCancer)
                         .addComponent(tfAmorCancer)
-                        .addComponent(tituloEnergiaCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfSorteCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(saudeCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(trabalhoCancer)
-                        .addComponent(amorCancer))
+                        .addComponent(amorCancer)
+                        .addComponent(tfSorteCancer)
+                        .addGroup(areaEnergiaCancerLayout.createSequentialGroup()
+                            .addGap(47, 47, 47)
+                            .addComponent(tituloEnergiaCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(sorteCancer))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         areaEnergiaCancerLayout.setVerticalGroup(
             areaEnergiaCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaEnergiaCancerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tituloEnergiaCancer)
-                .addGap(8, 8, 8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(amorCancer)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfAmorCancer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(trabalhoCancer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfTrabalhoCancer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(saudeCancer)
@@ -2468,12 +2828,12 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(tfSaudeCancer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sorteCancer)
-                .addGap(4, 4, 4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfSorteCancer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(108, 108, 108))
+                .addGap(23, 23, 23))
         );
 
-        cancer.add(areaEnergiaCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        cancer.add(areaEnergiaCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 40, 340, 300));
 
         tituloMensagemCancer.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemCancer.setText("Mensagem Do Dia");
@@ -2492,26 +2852,24 @@ public class Signos extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemCancerLayout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
                 .addGroup(areaMensagemCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCopiarMensagemCancer)
                     .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tituloMensagemCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagemCancerLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnCopiarMensagemCancer)))
+                    .addComponent(tituloMensagemCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17))
         );
         areaMensagemCancerLayout.setVerticalGroup(
             areaMensagemCancerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaMensagemCancerLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addComponent(tituloMensagemCancer, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnCopiarMensagemCancer)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
 
-        cancer.add(areaMensagemCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        cancer.add(areaMensagemCancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 350, 340, 260));
 
         fundoimagemcancer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         cancer.add(fundoimagemcancer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -2566,7 +2924,7 @@ public class Signos extends javax.swing.JFrame {
         imgSignoLeao.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\leao.jpg")); // NOI18N
 
         tituloCompatibilidadeLeao.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloCompatibilidadeLeao.setText("Áries");
+        tituloCompatibilidadeLeao.setText("Leão");
 
         periodoLeao.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         periodoLeao.setText("Periodo:");
@@ -2582,6 +2940,16 @@ public class Signos extends javax.swing.JFrame {
 
         nSorteLeao.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         nSorteLeao.setText("Numero Da Sorte:");
+
+        tfPeriodoLeao.setText("23/07 a 22/08");
+
+        tfElementoLeao.setText("Fogo");
+
+        tfPlanetaLeao.setText("Sol");
+
+        tfCorLeao.setText("Dourado");
+
+        tfNumeroLeao.setText("1");
 
         javax.swing.GroupLayout areaInformacoesLeaoLayout = new javax.swing.GroupLayout(areaInformacoesLeao);
         areaInformacoesLeao.setLayout(areaInformacoesLeaoLayout);
@@ -2667,10 +3035,12 @@ public class Signos extends javax.swing.JFrame {
 
         txPFortesLeao.setColumns(20);
         txPFortesLeao.setRows(5);
+        txPFortesLeao.setText("Confiante, criativo, generoso e possui \nespírito de liderança. Gosta de motivar as\n pessoas e costuma demonstrar\n entusiasmo quando acredita em algo.");
         jScrollPane22.setViewportView(txPFortesLeao);
 
         txpMelhorarLeao.setColumns(20);
         txpMelhorarLeao.setRows(5);
+        txpMelhorarLeao.setText("Pode ser orgulhoso e gostar muito de \nreconhecimento. Precisa aprender a ouvir\n críticas, dividir a atenção e aceitar que\n nem sempre estará no centro das \nsituações.");
         jScrollPane23.setViewportView(txpMelhorarLeao);
 
         javax.swing.GroupLayout areaCaracteristicasLeaoLayout = new javax.swing.GroupLayout(areaCaracteristicasLeao);
@@ -2704,7 +3074,7 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarLeao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         leao.add(areaCaracteristicasLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
@@ -2724,7 +3094,14 @@ public class Signos extends javax.swing.JFrame {
         sorteLeao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sorteLeao.setText("Sorte:");
 
+        tfAmorLeao.setText("90%");
+
+        tfTrabalhoLeao.setText("95%");
+
+        tfSaudeLeao.setText("85%");
         tfSaudeLeao.addActionListener(this::tfSaudeLeaoActionPerformed);
+
+        tfSorteLeao.setText("90%");
 
         javax.swing.GroupLayout areaEnergiaLeaoLayout = new javax.swing.GroupLayout(areaEnergiaLeao);
         areaEnergiaLeao.setLayout(areaEnergiaLeaoLayout);
@@ -2738,10 +3115,10 @@ public class Signos extends javax.swing.JFrame {
                         .addComponent(tfTrabalhoLeao)
                         .addComponent(tfAmorLeao)
                         .addComponent(tituloEnergiaLeao, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfSorteLeao, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(saudeLeao, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(trabalhoLeao)
-                        .addComponent(amorLeao))
+                        .addComponent(amorLeao)
+                        .addComponent(tfSorteLeao))
                     .addComponent(sorteLeao))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -2769,7 +3146,7 @@ public class Signos extends javax.swing.JFrame {
                 .addGap(108, 108, 108))
         );
 
-        leao.add(areaEnergiaLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        leao.add(areaEnergiaLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
         tituloMensagemLeao.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemLeao.setText("Mensagem Do Dia");
@@ -2785,29 +3162,33 @@ public class Signos extends javax.swing.JFrame {
         areaMensagemLeao.setLayout(areaMensagemLeaoLayout);
         areaMensagemLeaoLayout.setHorizontalGroup(
             areaMensagemLeaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemLeaoLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemLeaoLayout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
                 .addGroup(areaMensagemLeaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tituloMensagemLeao, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagemLeaoLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnCopiarMensagemLeao)))
-                .addGap(17, 17, 17))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemLeaoLayout.createSequentialGroup()
+                        .addComponent(btnCopiarMensagemLeao)
+                        .addGap(95, 95, 95))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemLeaoLayout.createSequentialGroup()
+                        .addComponent(tituloMensagemLeao, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))))
         );
         areaMensagemLeaoLayout.setVerticalGroup(
             areaMensagemLeaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaMensagemLeaoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(tituloMensagemLeao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCopiarMensagemLeao)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
-        leao.add(areaMensagemLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        leao.add(areaMensagemLeao, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 350, 340, 260));
 
         fundoimagemleao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         leao.add(fundoimagemleao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -2859,10 +3240,10 @@ public class Signos extends javax.swing.JFrame {
 
         virgem.add(areaPrevisoesVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
 
-        imgSigno6.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\virgem.jpg")); // NOI18N
+        imgSignoVirgem.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\virgem.jpg")); // NOI18N
 
         tituloCaracteristicaVirgem.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloCaracteristicaVirgem.setText("Áries");
+        tituloCaracteristicaVirgem.setText("Virgem");
 
         periodoVirgem.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         periodoVirgem.setText("Periodo:");
@@ -2879,11 +3260,21 @@ public class Signos extends javax.swing.JFrame {
         numeroVirgem.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroVirgem.setText("Numero Da Sorte:");
 
+        tfPeriodoVirgem.setText("23/08 a 22/09");
+
+        tfElementoVirgem.setText("Terra");
+
+        tfPlanetaVirgem.setText("Mercúrio");
+
+        tfCorVirgem.setText("Verde");
+
+        tfNumeroVirgem.setText("5");
+
         javax.swing.GroupLayout areaInformacoesVirgemLayout = new javax.swing.GroupLayout(areaInformacoesVirgem);
         areaInformacoesVirgem.setLayout(areaInformacoesVirgemLayout);
         areaInformacoesVirgemLayout.setHorizontalGroup(
             areaInformacoesVirgemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(imgSignoVirgem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(areaInformacoesVirgemLayout.createSequentialGroup()
                 .addGroup(areaInformacoesVirgemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(areaInformacoesVirgemLayout.createSequentialGroup()
@@ -2924,7 +3315,7 @@ public class Signos extends javax.swing.JFrame {
         areaInformacoesVirgemLayout.setVerticalGroup(
             areaInformacoesVirgemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaInformacoesVirgemLayout.createSequentialGroup()
-                .addComponent(imgSigno6, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgSignoVirgem, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tituloCaracteristicaVirgem, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2963,10 +3354,12 @@ public class Signos extends javax.swing.JFrame {
 
         txPFortesVirgem.setColumns(20);
         txPFortesVirgem.setRows(5);
+        txPFortesVirgem.setText("É organizado, responsável, inteligente e \ncuidadoso. Tem atenção aos detalhes e \ncostuma se esforçar para realizar suas\n tarefas da melhor maneira possível.");
         jScrollPane26.setViewportView(txPFortesVirgem);
 
         txpMelhorarVirgem.setColumns(20);
         txpMelhorarVirgem.setRows(5);
+        txpMelhorarVirgem.setText("Pode ser perfeccionista e exigir demais de\n si mesmo e dos outros. Precisa aprender\n a aceitar erros, relaxar e entender que\n nem tudo precisa ser perfeito.");
         jScrollPane27.setViewportView(txpMelhorarVirgem);
 
         javax.swing.GroupLayout areaCaracteristicasVirgemLayout = new javax.swing.GroupLayout(areaCaracteristicasVirgem);
@@ -3000,7 +3393,7 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarVirgem)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         virgem.add(areaCaracteristicasVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
@@ -3020,6 +3413,11 @@ public class Signos extends javax.swing.JFrame {
         sorteVirgem.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sorteVirgem.setText("Sorte:");
 
+        tfAmorVirgem.setText("80%");
+
+        tfTrabalhoVirgem.setText("95%");
+
+        tfSaudeVirgem.setText("90%");
         tfSaudeVirgem.addActionListener(this::tfSaudeVirgemActionPerformed);
 
         javax.swing.GroupLayout areaEnergiaVirgemLayout = new javax.swing.GroupLayout(areaEnergiaVirgem);
@@ -3065,7 +3463,7 @@ public class Signos extends javax.swing.JFrame {
                 .addGap(108, 108, 108))
         );
 
-        virgem.add(areaEnergiaVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        virgem.add(areaEnergiaVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
         tituloMensagemVirgem.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemVirgem.setText("Mensagem Do Dia");
@@ -3103,7 +3501,7 @@ public class Signos extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        virgem.add(areaMensagemVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        virgem.add(areaMensagemVirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 200));
 
         fundoimagemvirgem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         virgem.add(fundoimagemvirgem, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -3112,7 +3510,7 @@ public class Signos extends javax.swing.JFrame {
 
         libra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        imgSigno7.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\libra.jpg")); // NOI18N
+        imgSignoLibra.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\libra.jpg")); // NOI18N
 
         tituloLibra.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tituloLibra.setText("Áries");
@@ -3132,33 +3530,42 @@ public class Signos extends javax.swing.JFrame {
         numeroLibra.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroLibra.setText("Numero Da Sorte:");
 
+        tfPeriodoLibra.setText("23/09 a 22/10");
+
+        tfElementoLibra.setText("Ar");
+
+        tfPlanetaLibra.setText("Vênus");
+
+        tfCorLibra.setText("Rosa");
+
+        tfNumeroLibra.setText("6");
+
         javax.swing.GroupLayout areaInformacoesLibraLayout = new javax.swing.GroupLayout(areaInformacoesLibra);
         areaInformacoesLibra.setLayout(areaInformacoesLibraLayout);
         areaInformacoesLibraLayout.setHorizontalGroup(
             areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(imgSignoLibra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
-                .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaInformacoesLibraLayout.createSequentialGroup()
+                        .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(planetaLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(numeroLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfPlanetaLibra)
+                            .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(tfNumeroLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(periodoLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(tfPeriodoLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
-                            .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(planetaLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(numeroLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tfPlanetaLibra)
-                                .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(tfNumeroLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoesLibraLayout.createSequentialGroup()
-                            .addContainerGap()
+                        .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
+                                .addComponent(periodoLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(tfPeriodoLibra))
                             .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
                                     .addComponent(elementoLibra)
@@ -3177,7 +3584,7 @@ public class Signos extends javax.swing.JFrame {
         areaInformacoesLibraLayout.setVerticalGroup(
             areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
-                .addComponent(imgSigno7, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgSignoLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tituloLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3259,10 +3666,12 @@ public class Signos extends javax.swing.JFrame {
 
         txpFortesLibra.setColumns(20);
         txpFortesLibra.setRows(5);
+        txpFortesLibra.setText("É educado, diplomático, sociável e busca manter a harmonia. Tem facilidade para compreender diferentes pontos de vista e costuma valorizar relacionamentos equilibrados.");
         jScrollPane30.setViewportView(txpFortesLibra);
 
         txpMelhorarLibra.setColumns(20);
         txpMelhorarLibra.setRows(5);
+        txpMelhorarLibra.setText("Pode ter dificuldade para tomar decisões e evitar conflitos mesmo quando precisa se posicionar. Deve desenvolver mais confiança para expressar suas próprias opiniões.");
         jScrollPane31.setViewportView(txpMelhorarLibra);
 
         javax.swing.GroupLayout areaCaracteristicasLibraLayout = new javax.swing.GroupLayout(areaCaracteristicasLibra);
@@ -3296,7 +3705,7 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarLibra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         libra.add(areaCaracteristicasLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
@@ -3316,7 +3725,15 @@ public class Signos extends javax.swing.JFrame {
         sorteLibra.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sorteLibra.setText("Sorte:");
 
+        tfAmorLibra.setText("95%");
+
+        tfTrabalhoLibra.setText("85%");
+        tfTrabalhoLibra.addActionListener(this::tfTrabalhoLibraActionPerformed);
+
+        tfSaudeLibra.setText("85%");
         tfSaudeLibra.addActionListener(this::tfSaudeLibraActionPerformed);
+
+        tfSorteLibra.setText("90%");
 
         javax.swing.GroupLayout areaEnergiaLibraLayout = new javax.swing.GroupLayout(areaEnergiaLibra);
         areaEnergiaLibra.setLayout(areaEnergiaLibraLayout);
@@ -3361,7 +3778,7 @@ public class Signos extends javax.swing.JFrame {
                 .addGap(108, 108, 108))
         );
 
-        libra.add(areaEnergiaLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        libra.add(areaEnergiaLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
         tituloMensagemLibra.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemLibra.setText("Mensagem Do Dia");
@@ -3396,10 +3813,10 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(jScrollPane32, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCopiarMensagemLibra)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        libra.add(areaMensagemLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        libra.add(areaMensagemLibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 260));
 
         fundoimagemlibra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         libra.add(fundoimagemlibra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -7462,12 +7879,328 @@ public class Signos extends javax.swing.JFrame {
 
         areaAbas.addTab("Libra", libra);
 
+        iscorpiao.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        imgSignoEscorpiao.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\escorpiao.jpg")); // NOI18N
+
+        tituloEscorpiao.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tituloEscorpiao.setText("Escorpião");
+
+        periodoEscorpiao.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        periodoEscorpiao.setText("Periodo:");
+
+        elementoEscorpiao.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        elementoEscorpiao.setText("Elemento:");
+
+        planetaEscorpiao.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        planetaEscorpiao.setText("Planeta Regente:");
+
+        corEscorpiao.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        corEscorpiao.setText("Cor:");
+
+        numeroEscorpiao.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        numeroEscorpiao.setText("Numero Da Sorte:");
+
+        tfPeriodoEscorpiao.setText("23/10");
+
+        tfElementoEscorpiao.setText("Água");
+
+        tfPlanetaEscorpiao.setText("Plutão");
+
+        tfCorEscorpiao.setText("Vermelho escuro");
+
+        tfNumeroEscorpiao.setText("8");
+
+        javax.swing.GroupLayout areaInformacoesEscorpiaoLayout = new javax.swing.GroupLayout(areaInformacoesEscorpiao);
+        areaInformacoesEscorpiao.setLayout(areaInformacoesEscorpiaoLayout);
+        areaInformacoesEscorpiaoLayout.setHorizontalGroup(
+            areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                        .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(planetaEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(numeroEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfPlanetaEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNumeroEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                                .addComponent(corEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfCorEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                                .addComponent(elementoEscorpiao)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfElementoEscorpiao))
+                            .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                                .addComponent(periodoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfPeriodoEscorpiao)))))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(imgSignoEscorpiao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(tituloEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        areaInformacoesEscorpiaoLayout.setVerticalGroup(
+            areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaInformacoesEscorpiaoLayout.createSequentialGroup()
+                .addComponent(imgSignoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tituloEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(periodoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPeriodoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(elementoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfElementoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(planetaEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPlanetaEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(corEscorpiao, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tfCorEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(areaInformacoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(numeroEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfNumeroEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        iscorpiao.add(areaInformacoesEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
+
+        tituloCaracteristicasEscorpiao.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        tituloCaracteristicasEscorpiao.setText("Características");
+
+        pFortesEscorpiao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pFortesEscorpiao.setText("Pontos Fortes:");
+
+        pMelhorarEscorpiao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pMelhorarEscorpiao.setText("Pontos a Melhorar:");
+
+        tfPFortesEscorpiao.setColumns(20);
+        tfPFortesEscorpiao.setRows(5);
+        tfPFortesEscorpiao.setText("É determinado, intenso, corajoso e leal. Quando estabelece um objetivo, costuma se dedicar profundamente e não desiste facilmente.");
+        jScrollPane97.setViewportView(tfPFortesEscorpiao);
+
+        txpMelhorarEscorpiao.setColumns(20);
+        txpMelhorarEscorpiao.setRows(5);
+        txpMelhorarEscorpiao.setText("Pode ser desconfiado, ciumento e guardar ressentimentos. Precisa aprender a confiar mais, controlar emoções intensas e deixar algumas situações para trás.");
+        jScrollPane98.setViewportView(txpMelhorarEscorpiao);
+
+        javax.swing.GroupLayout areaCaracteristicasEscorpiaoLayout = new javax.swing.GroupLayout(areaCaracteristicasEscorpiao);
+        areaCaracteristicasEscorpiao.setLayout(areaCaracteristicasEscorpiaoLayout);
+        areaCaracteristicasEscorpiaoLayout.setHorizontalGroup(
+            areaCaracteristicasEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasEscorpiaoLayout.createSequentialGroup()
+                .addGroup(areaCaracteristicasEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaCaracteristicasEscorpiaoLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(areaCaracteristicasEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pFortesEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pMelhorarEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(areaCaracteristicasEscorpiaoLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(tituloCaracteristicasEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(141, Short.MAX_VALUE))
+        );
+        areaCaracteristicasEscorpiaoLayout.setVerticalGroup(
+            areaCaracteristicasEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasEscorpiaoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tituloCaracteristicasEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pFortesEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pMelhorarEscorpiao)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        iscorpiao.add(areaCaracteristicasEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
+
+        areaPrevisoesEscorpiao.setForeground(new java.awt.Color(255, 255, 255));
+
+        previsaoEscorpiao.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        previsaoEscorpiao.setText("PREVISÃO DO DIA:");
+
+        txPrevisaoEscorpiao.setColumns(20);
+        txPrevisaoEscorpiao.setRows(5);
+        jScrollPane99.setViewportView(txPrevisaoEscorpiao);
+
+        btnAtualizarPrevisoesEscorpiao.setBackground(new java.awt.Color(102, 102, 255));
+        btnAtualizarPrevisoesEscorpiao.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        btnAtualizarPrevisoesEscorpiao.setForeground(new java.awt.Color(255, 255, 255));
+        btnAtualizarPrevisoesEscorpiao.setText("Atualizar Previsão");
+
+        javax.swing.GroupLayout areaPrevisoesEscorpiaoLayout = new javax.swing.GroupLayout(areaPrevisoesEscorpiao);
+        areaPrevisoesEscorpiao.setLayout(areaPrevisoesEscorpiaoLayout);
+        areaPrevisoesEscorpiaoLayout.setHorizontalGroup(
+            areaPrevisoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesEscorpiaoLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(areaPrevisoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaPrevisoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnAtualizarPrevisoesEscorpiao)
+                        .addGroup(areaPrevisoesEscorpiaoLayout.createSequentialGroup()
+                            .addComponent(previsaoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(38, 38, 38)))
+                    .addComponent(jScrollPane99, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
+        areaPrevisoesEscorpiaoLayout.setVerticalGroup(
+            areaPrevisoesEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesEscorpiaoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(previsaoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane99, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnAtualizarPrevisoesEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
+        iscorpiao.add(areaPrevisoesEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
+
+        tituloEnergiaEscorpiao.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloEnergiaEscorpiao.setText("Energia Do Dia");
+
+        amorEscorpiao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        amorEscorpiao.setText("Amor:");
+
+        trabalhoEscorpiao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        trabalhoEscorpiao.setText("Trabalho:");
+
+        saudeEscorpiao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        saudeEscorpiao.setText("Saúde:");
+
+        sorteEscorpiao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        sorteEscorpiao.setText("Sorte:");
+
+        tfAmorEscorpiao.setText("90%");
+
+        tfTrabalhoEscorpiao.setText("95%");
+        tfTrabalhoEscorpiao.addActionListener(this::tfTrabalhoEscorpiaoActionPerformed);
+
+        tfSaudeEscorpiao.setText("85%");
+        tfSaudeEscorpiao.addActionListener(this::tfSaudeEscorpiaoActionPerformed);
+
+        tfSorteEscorpiao.setText("90%");
+        tfSorteEscorpiao.addActionListener(this::tfSorteEscorpiaoActionPerformed);
+
+        javax.swing.GroupLayout areaEnergiaEscorpiaoLayout = new javax.swing.GroupLayout(areaEnergiaEscorpiao);
+        areaEnergiaEscorpiao.setLayout(areaEnergiaEscorpiaoLayout);
+        areaEnergiaEscorpiaoLayout.setHorizontalGroup(
+            areaEnergiaEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaEscorpiaoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(areaEnergiaEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfTrabalhoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(saudeEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfSaudeEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sorteEscorpiao)
+                    .addComponent(tituloEnergiaEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amorEscorpiao)
+                    .addComponent(tfAmorEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(trabalhoEscorpiao)
+                    .addComponent(tfSorteEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        areaEnergiaEscorpiaoLayout.setVerticalGroup(
+            areaEnergiaEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaEscorpiaoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(areaEnergiaEscorpiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaEnergiaEscorpiaoLayout.createSequentialGroup()
+                        .addComponent(tituloEnergiaEscorpiao)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(amorEscorpiao)
+                        .addGap(2, 2, 2)
+                        .addComponent(tfAmorEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(trabalhoEscorpiao)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tfTrabalhoEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(saudeEscorpiao)
+                        .addGap(28, 28, 28))
+                    .addGroup(areaEnergiaEscorpiaoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(tfSaudeEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(4, 4, 4)
+                .addComponent(sorteEscorpiao)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tfSorteEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
+        );
+
+        iscorpiao.add(areaEnergiaEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
+
+        tituloMensagemEscorpiao.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloMensagemEscorpiao.setText("Mensagem Do Dia");
+
+        txMensagemEscorpiao.setColumns(20);
+        txMensagemEscorpiao.setRows(5);
+        jScrollPane100.setViewportView(txMensagemEscorpiao);
+
+        btnCopiarMensagemEscorpiao.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCopiarMensagemEscorpiao.setText("Copiar Mensagem");
+
+        javax.swing.GroupLayout areaMensagemEscoripiaoLayout = new javax.swing.GroupLayout(areaMensagemEscoripiao);
+        areaMensagemEscoripiao.setLayout(areaMensagemEscoripiaoLayout);
+        areaMensagemEscoripiaoLayout.setHorizontalGroup(
+            areaMensagemEscoripiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemEscoripiaoLayout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addGroup(areaMensagemEscoripiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane100, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tituloMensagemEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(areaMensagemEscoripiaoLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnCopiarMensagemEscorpiao)))
+                .addGap(17, 17, 17))
+        );
+        areaMensagemEscoripiaoLayout.setVerticalGroup(
+            areaMensagemEscoripiaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemEscoripiaoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tituloMensagemEscorpiao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jScrollPane100, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCopiarMensagemEscorpiao)
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+
+        iscorpiao.add(areaMensagemEscoripiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 260));
+
+        fundoImagemEscorpiao.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\imagenfundo.png")); // NOI18N
+        iscorpiao.add(fundoImagemEscorpiao, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, 890));
+
+        areaAbas.addTab("Escorpião", iscorpiao);
+
         sagitario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        imgSigno9.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\sagitario.jpg")); // NOI18N
+        imgSignoSagitario.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\sagitario.jpg")); // NOI18N
 
         tituloSagitario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloSagitario.setText("Áries");
+        tituloSagitario.setText("Sagitário");
 
         periodoSagitario.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         periodoSagitario.setText("Periodo:");
@@ -7484,33 +8217,42 @@ public class Signos extends javax.swing.JFrame {
         numeroSagitario.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroSagitario.setText("Numero Da Sorte:");
 
+        tfPeriodoSagitario.setText("22/11 a 21/12");
+
+        tfElementoSagitario.setText("Fogo");
+
+        tfPlanetaSagitario.setText("Júpter");
+
+        tfCorSagitario.setText("Roxo");
+
+        tfNumeroSagitario.setText("3");
+
         javax.swing.GroupLayout areaInformacoesSagitarioLayout = new javax.swing.GroupLayout(areaInformacoesSagitario);
         areaInformacoesSagitario.setLayout(areaInformacoesSagitarioLayout);
         areaInformacoesSagitarioLayout.setHorizontalGroup(
             areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(imgSignoSagitario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
-                .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaInformacoesSagitarioLayout.createSequentialGroup()
+                        .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(planetaSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(numeroSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfPlanetaSagitario)
+                            .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(tfNumeroSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(periodoSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(tfPeriodoSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
-                            .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(planetaSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(numeroSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tfPlanetaSagitario)
-                                .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(tfNumeroSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoesSagitarioLayout.createSequentialGroup()
-                            .addContainerGap()
+                        .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
+                                .addComponent(periodoSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(tfPeriodoSagitario))
                             .addGroup(areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
                                     .addComponent(elementoSagitario)
@@ -7523,13 +8265,13 @@ public class Signos extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(tituloSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         areaInformacoesSagitarioLayout.setVerticalGroup(
             areaInformacoesSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaInformacoesSagitarioLayout.createSequentialGroup()
-                .addComponent(imgSigno9, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgSignoSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tituloSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -7611,10 +8353,12 @@ public class Signos extends javax.swing.JFrame {
 
         txPFortesSagitario.setColumns(20);
         txPFortesSagitario.setRows(5);
+        txPFortesSagitario.setText("É otimista, aventureiro, sincero e muito interessado em conhecer coisas novas. Gosta de liberdade, experiências diferentes e costuma enxergar possibilidades mesmo diante de dificuldades.");
         jScrollPane38.setViewportView(txPFortesSagitario);
 
         txpMelhorarSagitario.setColumns(20);
         txpMelhorarSagitario.setRows(5);
+        txpMelhorarSagitario.setText("Pode agir sem pensar, exagerar nas palavras ou perder a paciência com limitações. Precisa desenvolver mais responsabilidade, planejamento e cuidado ao falar.");
         jScrollPane39.setViewportView(txpMelhorarSagitario);
 
         javax.swing.GroupLayout areaCaracteristicasSagitarioLayout = new javax.swing.GroupLayout(areaCaracteristicasSagitario);
@@ -7648,7 +8392,7 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarSagitario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         sagitario.add(areaCaracteristicasSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
@@ -7668,7 +8412,15 @@ public class Signos extends javax.swing.JFrame {
         sorteSagitario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sorteSagitario.setText("Sorte:");
 
+        tfAmorSagitario.setText("85%");
+
+        tfTrabalhoSagitario.setText("90%");
+
+        tfSaudeSagitario.setText("85%");
         tfSaudeSagitario.addActionListener(this::tfSaudeSagitarioActionPerformed);
+
+        tfSorteSagitario.setText("95%");
+        tfSorteSagitario.addActionListener(this::tfSorteSagitarioActionPerformed);
 
         javax.swing.GroupLayout areaEnergiaSagitarioLayout = new javax.swing.GroupLayout(areaEnergiaSagitario);
         areaEnergiaSagitario.setLayout(areaEnergiaSagitarioLayout);
@@ -7678,14 +8430,14 @@ public class Signos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(areaEnergiaSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(areaEnergiaSagitarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tfSaudeSagitario, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-                        .addComponent(tfTrabalhoSagitario)
+                        .addComponent(tfTrabalhoSagitario, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
                         .addComponent(tfAmorSagitario)
                         .addComponent(tituloEnergiaSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(tfSorteSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(saudeSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(trabalhoSagitario)
                         .addComponent(amorSagitario))
+                    .addComponent(saudeSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfSaudeSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sorteSagitario))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -7708,12 +8460,12 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(tfSaudeSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sorteSagitario)
-                .addGap(4, 4, 4)
+                .addGap(10, 10, 10)
                 .addComponent(tfSorteSagitario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(108, 108, 108))
         );
 
-        sagitario.add(areaEnergiaSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        sagitario.add(areaEnergiaSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
         tituloMensagemSagitario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloMensagemSagitario.setText("Mensagem Do Dia");
@@ -7748,10 +8500,10 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(jScrollPane40, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCopiarMensagemSagitario)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        sagitario.add(areaMensagemSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        sagitario.add(areaMensagemSagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 260));
 
         fundoimagemsagitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         sagitario.add(fundoimagemsagitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -7760,50 +8512,50 @@ public class Signos extends javax.swing.JFrame {
 
         capricornio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        areaPrevisoes1.setForeground(new java.awt.Color(255, 255, 255));
+        areaPrevisoesCapricornio.setForeground(new java.awt.Color(255, 255, 255));
 
-        previsaoAries1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        previsaoAries1.setText("PREVISÃO DO DIA:");
+        previsaoCapricornio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        previsaoCapricornio.setText("PREVISÃO DO DIA:");
 
-        txPrevisaoAries1.setColumns(20);
-        txPrevisaoAries1.setRows(5);
-        jScrollPane5.setViewportView(txPrevisaoAries1);
+        txPrevisaoCapricornio.setColumns(20);
+        txPrevisaoCapricornio.setRows(5);
+        jScrollPane5.setViewportView(txPrevisaoCapricornio);
 
-        btnAtualizarPrevisoesAries1.setBackground(new java.awt.Color(102, 102, 255));
-        btnAtualizarPrevisoesAries1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        btnAtualizarPrevisoesAries1.setForeground(new java.awt.Color(255, 255, 255));
-        btnAtualizarPrevisoesAries1.setText("Atualizar Previsão");
+        btnAtualizarPrevisoesCapricornio.setBackground(new java.awt.Color(102, 102, 255));
+        btnAtualizarPrevisoesCapricornio.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        btnAtualizarPrevisoesCapricornio.setForeground(new java.awt.Color(255, 255, 255));
+        btnAtualizarPrevisoesCapricornio.setText("Atualizar Previsão");
 
-        javax.swing.GroupLayout areaPrevisoes1Layout = new javax.swing.GroupLayout(areaPrevisoes1);
-        areaPrevisoes1.setLayout(areaPrevisoes1Layout);
-        areaPrevisoes1Layout.setHorizontalGroup(
-            areaPrevisoes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes1Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaPrevisoesCapricornioLayout = new javax.swing.GroupLayout(areaPrevisoesCapricornio);
+        areaPrevisoesCapricornio.setLayout(areaPrevisoesCapricornioLayout);
+        areaPrevisoesCapricornioLayout.setHorizontalGroup(
+            areaPrevisoesCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesCapricornioLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(areaPrevisoes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaPrevisoes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnAtualizarPrevisoesAries1)
-                        .addGroup(areaPrevisoes1Layout.createSequentialGroup()
-                            .addComponent(previsaoAries1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(areaPrevisoesCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaPrevisoesCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnAtualizarPrevisoesCapricornio)
+                        .addGroup(areaPrevisoesCapricornioLayout.createSequentialGroup()
+                            .addComponent(previsaoCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(38, 38, 38)))
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
-        areaPrevisoes1Layout.setVerticalGroup(
-            areaPrevisoes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes1Layout.createSequentialGroup()
+        areaPrevisoesCapricornioLayout.setVerticalGroup(
+            areaPrevisoesCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesCapricornioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(previsaoAries1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(previsaoCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAtualizarPrevisoesAries1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAtualizarPrevisoesCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        capricornio.add(areaPrevisoes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
+        capricornio.add(areaPrevisoesCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
 
-        imgSigno1.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\capricornio.jpg")); // NOI18N
+        imgSignoCapricornio.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\capricornio.jpg")); // NOI18N
 
         tituloCapricornio.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tituloCapricornio.setText("Capricórnio");
@@ -7823,11 +8575,22 @@ public class Signos extends javax.swing.JFrame {
         numeroCapricornio.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         numeroCapricornio.setText("Numero Da Sorte:");
 
+        tfPeriodoCapricornio.setText("22/12 a 19/01");
+
+        tfElementoCapricornio.setText("Terra");
+
+        tfPlanetaCapricornio.setText("Saturno");
+
+        tfCorCapricornio.setText("Marrom e preto");
+
+        tfNumeroCapricornio.setText("3");
+        tfNumeroCapricornio.addActionListener(this::tfNumeroCapricornioActionPerformed);
+
         javax.swing.GroupLayout areaInformacoesCapricornioLayout = new javax.swing.GroupLayout(areaInformacoesCapricornio);
         areaInformacoesCapricornio.setLayout(areaInformacoesCapricornioLayout);
         areaInformacoesCapricornioLayout.setHorizontalGroup(
             areaInformacoesCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(imgSignoCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(areaInformacoesCapricornioLayout.createSequentialGroup()
                 .addGroup(areaInformacoesCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(areaInformacoesCapricornioLayout.createSequentialGroup()
@@ -7868,7 +8631,7 @@ public class Signos extends javax.swing.JFrame {
         areaInformacoesCapricornioLayout.setVerticalGroup(
             areaInformacoesCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaInformacoesCapricornioLayout.createSequentialGroup()
-                .addComponent(imgSigno1, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imgSignoCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tituloCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -7907,10 +8670,12 @@ public class Signos extends javax.swing.JFrame {
 
         txPFortesCapricornio.setColumns(20);
         txPFortesCapricornio.setRows(5);
+        txPFortesCapricornio.setText("É disciplinado, responsável, trabalhador e persistente. Costuma estabelecer objetivos claros e trabalhar com dedicação para alcançar estabilidade e sucesso.");
         jScrollPane6.setViewportView(txPFortesCapricornio);
 
         txpMelhorarCapricornio.setColumns(20);
         txpMelhorarCapricornio.setRows(5);
+        txpMelhorarCapricornio.setText("Pode ser muito rígido consigo mesmo e trabalhar além do necessário. Precisa aprender a descansar, aceitar imprevistos e demonstrar mais seus sentimentos.");
         jScrollPane7.setViewportView(txpMelhorarCapricornio);
 
         javax.swing.GroupLayout areaCaracteristicaCapricornioLayout = new javax.swing.GroupLayout(areaCaracteristicaCapricornio);
@@ -7944,110 +8709,117 @@ public class Signos extends javax.swing.JFrame {
                 .addComponent(pMelhorarCapricornio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         capricornio.add(areaCaracteristicaCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
 
-        tituloEnergiaAries1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tituloEnergiaAries1.setText("Energia Do Dia");
+        tituloEnergiaCapricornio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloEnergiaCapricornio.setText("Energia Do Dia");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel7.setText("Amor:");
+        amorCapricornio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        amorCapricornio.setText("Amor:");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel8.setText("Trabalho:");
+        trabalhoCapricornio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        trabalhoCapricornio.setText("Trabalho:");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel9.setText("Saúde:");
+        saudeCapricornio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        saudeCapricornio.setText("Saúde:");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel10.setText("Sorte:");
+        sorteCapricornio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        sorteCapricornio.setText("Sorte:");
 
-        tfSaudeAries1.addActionListener(this::tfSaudeAries1ActionPerformed);
+        tfAmorCapricornio.setText("80%");
 
-        javax.swing.GroupLayout areaEnergia1Layout = new javax.swing.GroupLayout(areaEnergia1);
-        areaEnergia1.setLayout(areaEnergia1Layout);
-        areaEnergia1Layout.setHorizontalGroup(
-            areaEnergia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergia1Layout.createSequentialGroup()
+        tfTrabalhoCapricornio.setText("95%");
+
+        tfSaudeCapricornio.setText("85%");
+        tfSaudeCapricornio.addActionListener(this::tfSaudeCapricornioActionPerformed);
+
+        tfSorteCapricornio.setText("85%");
+
+        javax.swing.GroupLayout areaEnergiaCapricornioLayout = new javax.swing.GroupLayout(areaEnergiaCapricornio);
+        areaEnergiaCapricornio.setLayout(areaEnergiaCapricornioLayout);
+        areaEnergiaCapricornioLayout.setHorizontalGroup(
+            areaEnergiaCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaCapricornioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(areaEnergia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaEnergia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tfSaudeAries1, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-                        .addComponent(tfTrabalhoAries1)
-                        .addComponent(tfAmorAries1)
-                        .addComponent(tituloEnergiaAries1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfSorteAries1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel8)
-                        .addComponent(jLabel7))
-                    .addComponent(jLabel10))
+                .addGroup(areaEnergiaCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaEnergiaCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(tfSaudeCapricornio, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                        .addComponent(tfTrabalhoCapricornio)
+                        .addComponent(tfAmorCapricornio)
+                        .addComponent(tituloEnergiaCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tfSorteCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(saudeCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(trabalhoCapricornio)
+                        .addComponent(amorCapricornio))
+                    .addComponent(sorteCapricornio))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
-        areaEnergia1Layout.setVerticalGroup(
-            areaEnergia1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergia1Layout.createSequentialGroup()
+        areaEnergiaCapricornioLayout.setVerticalGroup(
+            areaEnergiaCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaCapricornioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloEnergiaAries1)
+                .addComponent(tituloEnergiaCapricornio)
                 .addGap(8, 8, 8)
-                .addComponent(jLabel7)
+                .addComponent(amorCapricornio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfAmorAries1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfAmorCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
+                .addComponent(trabalhoCapricornio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tfTrabalhoAries1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfTrabalhoCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
+                .addComponent(saudeCapricornio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfSaudeAries1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfSaudeCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
+                .addComponent(sorteCapricornio)
                 .addGap(4, 4, 4)
-                .addComponent(tfSorteAries1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfSorteCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(108, 108, 108))
         );
 
-        capricornio.add(areaEnergia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        capricornio.add(areaEnergiaCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
-        tituloMensagemAries1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tituloMensagemAries1.setText("Mensagem Do Dia");
+        tituloMensagemCapricornio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloMensagemCapricornio.setText("Mensagem Do Dia");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane8.setViewportView(jTextArea2);
+        txMensagemCapricornio.setColumns(20);
+        txMensagemCapricornio.setRows(5);
+        jScrollPane8.setViewportView(txMensagemCapricornio);
 
-        btnCopiarMensagemAries1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnCopiarMensagemAries1.setText("Copiar Mensagem");
+        btnCopiarMensagemCapricornio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCopiarMensagemCapricornio.setText("Copiar Mensagem");
 
-        javax.swing.GroupLayout areaMensagem1Layout = new javax.swing.GroupLayout(areaMensagem1);
-        areaMensagem1.setLayout(areaMensagem1Layout);
-        areaMensagem1Layout.setHorizontalGroup(
-            areaMensagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagem1Layout.createSequentialGroup()
-                .addContainerGap(62, Short.MAX_VALUE)
-                .addGroup(areaMensagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout areaMensagemCapricornioLayout = new javax.swing.GroupLayout(areaMensagemCapricornio);
+        areaMensagemCapricornio.setLayout(areaMensagemCapricornioLayout);
+        areaMensagemCapricornioLayout.setHorizontalGroup(
+            areaMensagemCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemCapricornioLayout.createSequentialGroup()
+                .addContainerGap(65, Short.MAX_VALUE)
+                .addGroup(areaMensagemCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tituloMensagemAries1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagem1Layout.createSequentialGroup()
+                    .addComponent(tituloMensagemCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(areaMensagemCapricornioLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(btnCopiarMensagemAries1)))
+                        .addComponent(btnCopiarMensagemCapricornio)))
                 .addGap(17, 17, 17))
         );
-        areaMensagem1Layout.setVerticalGroup(
-            areaMensagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaMensagem1Layout.createSequentialGroup()
+        areaMensagemCapricornioLayout.setVerticalGroup(
+            areaMensagemCapricornioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemCapricornioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloMensagemAries1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloMensagemCapricornio, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCopiarMensagemAries1)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addComponent(btnCopiarMensagemCapricornio)
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        capricornio.add(areaMensagem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        capricornio.add(areaMensagemCapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 260));
 
         fundoimagemcapricornio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         capricornio.add(fundoimagemcapricornio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -8056,294 +8828,313 @@ public class Signos extends javax.swing.JFrame {
 
         aquario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        areaPrevisoes10.setForeground(new java.awt.Color(255, 255, 255));
+        areaPrevisoesAquario.setForeground(new java.awt.Color(255, 255, 255));
 
-        previsaoAries10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        previsaoAries10.setText("PREVISÃO DO DIA:");
+        previsaoAquario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        previsaoAquario.setText("PREVISÃO DO DIA:");
 
-        txPrevisaoAries10.setColumns(20);
-        txPrevisaoAries10.setRows(5);
-        jScrollPane41.setViewportView(txPrevisaoAries10);
+        txPrevisaoAquario.setColumns(20);
+        txPrevisaoAquario.setRows(5);
+        jScrollPane41.setViewportView(txPrevisaoAquario);
 
-        btnAtualizarPrevisoesAries10.setBackground(new java.awt.Color(102, 102, 255));
-        btnAtualizarPrevisoesAries10.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        btnAtualizarPrevisoesAries10.setForeground(new java.awt.Color(255, 255, 255));
-        btnAtualizarPrevisoesAries10.setText("Atualizar Previsão");
+        btnAtualizarPrevisoesAquario.setBackground(new java.awt.Color(102, 102, 255));
+        btnAtualizarPrevisoesAquario.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        btnAtualizarPrevisoesAquario.setForeground(new java.awt.Color(255, 255, 255));
+        btnAtualizarPrevisoesAquario.setText("Atualizar Previsão");
 
-        javax.swing.GroupLayout areaPrevisoes10Layout = new javax.swing.GroupLayout(areaPrevisoes10);
-        areaPrevisoes10.setLayout(areaPrevisoes10Layout);
-        areaPrevisoes10Layout.setHorizontalGroup(
-            areaPrevisoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes10Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaPrevisoesAquarioLayout = new javax.swing.GroupLayout(areaPrevisoesAquario);
+        areaPrevisoesAquario.setLayout(areaPrevisoesAquarioLayout);
+        areaPrevisoesAquarioLayout.setHorizontalGroup(
+            areaPrevisoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesAquarioLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(areaPrevisoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaPrevisoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnAtualizarPrevisoesAries10)
-                        .addGroup(areaPrevisoes10Layout.createSequentialGroup()
-                            .addComponent(previsaoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(areaPrevisoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaPrevisoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnAtualizarPrevisoesAquario)
+                        .addGroup(areaPrevisoesAquarioLayout.createSequentialGroup()
+                            .addComponent(previsaoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(38, 38, 38)))
                     .addComponent(jScrollPane41, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
-        areaPrevisoes10Layout.setVerticalGroup(
-            areaPrevisoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes10Layout.createSequentialGroup()
+        areaPrevisoesAquarioLayout.setVerticalGroup(
+            areaPrevisoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesAquarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(previsaoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(previsaoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane41, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAtualizarPrevisoesAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAtualizarPrevisoesAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        aquario.add(areaPrevisoes10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
+        aquario.add(areaPrevisoesAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
 
-        imgSigno10.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\aries.jpg")); // NOI18N
+        imgSignoAquario.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\aquario.jpg")); // NOI18N
 
-        tituloAries10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloAries10.setText("Áries");
+        tituloAquario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tituloAquario.setText("Aquário");
 
-        periodoAries10.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        periodoAries10.setText("Periodo:");
+        periodoAquario.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        periodoAquario.setText("Periodo:");
 
-        elementoAries10.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        elementoAries10.setText("Elemento:");
+        elementoAquario.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        elementoAquario.setText("Elemento:");
 
-        planetaAries10.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        planetaAries10.setText("Planeta Regente:");
+        planetaAquario.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        planetaAquario.setText("Planeta Regente:");
 
-        corAries10.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        corAries10.setText("Cor:");
+        corAquario.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        corAquario.setText("Cor:");
 
-        numeroAries10.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        numeroAries10.setText("Numero Da Sorte:");
+        numeroAquario.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        numeroAquario.setText("Numero Da Sorte:");
 
-        javax.swing.GroupLayout areaInformacoes10Layout = new javax.swing.GroupLayout(areaInformacoes10);
-        areaInformacoes10.setLayout(areaInformacoes10Layout);
-        areaInformacoes10Layout.setHorizontalGroup(
-            areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(areaInformacoes10Layout.createSequentialGroup()
-                .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaInformacoes10Layout.createSequentialGroup()
+        tfPeriodoAquario.setText("20/01 a 18/02");
+        tfPeriodoAquario.addActionListener(this::tfPeriodoAquarioActionPerformed);
+
+        tfElementoAquario.setText("Ar");
+
+        tfPlanetaAquario.setText("Urano");
+
+        tfCorAquario.setText("Azul");
+
+        tfNumeroAquario.setText("4");
+
+        javax.swing.GroupLayout areaInformacoesAquarioLayout = new javax.swing.GroupLayout(areaInformacoesAquario);
+        areaInformacoesAquario.setLayout(areaInformacoesAquarioLayout);
+        areaInformacoesAquarioLayout.setHorizontalGroup(
+            areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(imgSignoAquario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
+                .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaInformacoesAquarioLayout.createSequentialGroup()
+                        .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(planetaAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(numeroAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfPlanetaAquario)
+                            .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(tfNumeroAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(periodoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(tfPeriodoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(areaInformacoes10Layout.createSequentialGroup()
-                            .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(areaInformacoes10Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(planetaAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(numeroAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tfPlanetaAries10)
-                                .addGroup(areaInformacoes10Layout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(tfNumeroAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoes10Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(areaInformacoes10Layout.createSequentialGroup()
-                                    .addComponent(elementoAries10)
+                        .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
+                                .addComponent(periodoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(tfPeriodoAquario))
+                            .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
+                                    .addComponent(elementoAquario)
                                     .addGap(32, 32, 32)
-                                    .addComponent(tfElementoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(areaInformacoes10Layout.createSequentialGroup()
-                                    .addComponent(corAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfElementoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
+                                    .addComponent(corAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(tfCorAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(tfCorAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(areaInformacoes10Layout.createSequentialGroup()
+            .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(tituloAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        areaInformacoes10Layout.setVerticalGroup(
-            areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaInformacoes10Layout.createSequentialGroup()
-                .addComponent(imgSigno10, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+        areaInformacoesAquarioLayout.setVerticalGroup(
+            areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaInformacoesAquarioLayout.createSequentialGroup()
+                .addComponent(imgSignoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tituloAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(periodoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPeriodoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(periodoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPeriodoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(elementoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfElementoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(elementoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfElementoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(planetaAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPlanetaAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(planetaAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPlanetaAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(corAries10, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(tfCorAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(corAquario, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tfCorAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(areaInformacoes10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numeroAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfNumeroAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numeroAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfNumeroAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        aquario.add(areaInformacoes10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
+        aquario.add(areaInformacoesAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
 
-        tituloCaracteristicas10.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        tituloCaracteristicas10.setText("Características");
+        tituloCaracteristicasAquario.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        tituloCaracteristicasAquario.setText("Características");
 
-        pForesAries10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        pForesAries10.setText("Pontos Fortes:");
+        pForesAquario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pForesAquario.setText("Pontos Fortes:");
 
-        pMelhorarAries10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        pMelhorarAries10.setText("Pontos a Melhorar:");
+        pMelhorarAquario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pMelhorarAquario.setText("Pontos a Melhorar:");
 
-        txPFortesAries10.setColumns(20);
-        txPFortesAries10.setRows(5);
-        jScrollPane42.setViewportView(txPFortesAries10);
+        txPFortesAquario.setColumns(20);
+        txPFortesAquario.setRows(5);
+        txPFortesAquario.setText("É criativo, independente, original e gosta de novas ideias. Costuma pensar de maneira diferente e valoriza a liberdade para desenvolver seus próprios projetos.");
+        jScrollPane42.setViewportView(txPFortesAquario);
 
-        txpMelhorarAries10.setColumns(20);
-        txpMelhorarAries10.setRows(5);
-        jScrollPane43.setViewportView(txpMelhorarAries10);
+        txpMelhorarAquario.setColumns(20);
+        txpMelhorarAquario.setRows(5);
+        txpMelhorarAquario.setText("Pode parecer distante emocionalmente e ser bastante teimoso em suas opiniões. Precisa aprender a considerar melhor os sentimentos dos outros e ser mais flexível.");
+        jScrollPane43.setViewportView(txpMelhorarAquario);
 
-        javax.swing.GroupLayout areaCaracteristicas10Layout = new javax.swing.GroupLayout(areaCaracteristicas10);
-        areaCaracteristicas10.setLayout(areaCaracteristicas10Layout);
-        areaCaracteristicas10Layout.setHorizontalGroup(
-            areaCaracteristicas10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicas10Layout.createSequentialGroup()
-                .addGroup(areaCaracteristicas10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaCaracteristicas10Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaCaracteristicasAquarioLayout = new javax.swing.GroupLayout(areaCaracteristicasAquario);
+        areaCaracteristicasAquario.setLayout(areaCaracteristicasAquarioLayout);
+        areaCaracteristicasAquarioLayout.setHorizontalGroup(
+            areaCaracteristicasAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasAquarioLayout.createSequentialGroup()
+                .addGroup(areaCaracteristicasAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaCaracteristicasAquarioLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addGroup(areaCaracteristicas10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pForesAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(areaCaracteristicasAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pForesAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pMelhorarAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(areaCaracteristicas10Layout.createSequentialGroup()
+                            .addComponent(pMelhorarAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(areaCaracteristicasAquarioLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(tituloCaracteristicas10, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tituloCaracteristicasAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
-        areaCaracteristicas10Layout.setVerticalGroup(
-            areaCaracteristicas10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicas10Layout.createSequentialGroup()
+        areaCaracteristicasAquarioLayout.setVerticalGroup(
+            areaCaracteristicasAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasAquarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloCaracteristicas10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloCaracteristicasAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pForesAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pForesAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pMelhorarAries10)
+                .addComponent(pMelhorarAquario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        aquario.add(areaCaracteristicas10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
+        aquario.add(areaCaracteristicasAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
 
-        tituloEnergiaAries10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tituloEnergiaAries10.setText("Energia Do Dia");
+        tituloEnergiaAquario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloEnergiaAquario.setText("Energia Do Dia");
 
-        jLabel43.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel43.setText("Amor:");
+        amorAquario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        amorAquario.setText("Amor:");
 
-        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel44.setText("Trabalho:");
+        trabalhoAquario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        trabalhoAquario.setText("Trabalho:");
 
-        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel45.setText("Saúde:");
+        saudeAquario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        saudeAquario.setText("Saúde:");
 
-        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel46.setText("Sorte:");
+        sorteAquario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        sorteAquario.setText("Sorte:");
 
-        tfSaudeAries10.addActionListener(this::tfSaudeAries10ActionPerformed);
+        tfAmorAquario.setText("80%");
 
-        javax.swing.GroupLayout areaEnergia10Layout = new javax.swing.GroupLayout(areaEnergia10);
-        areaEnergia10.setLayout(areaEnergia10Layout);
-        areaEnergia10Layout.setHorizontalGroup(
-            areaEnergia10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergia10Layout.createSequentialGroup()
+        tfTrabalhoAquario.setText("90%");
+
+        tfSaudeAquario.setText("85%");
+        tfSaudeAquario.addActionListener(this::tfSaudeAquarioActionPerformed);
+
+        tfSorteAquario.setText("90%");
+
+        javax.swing.GroupLayout areaEnergiaAquarioLayout = new javax.swing.GroupLayout(areaEnergiaAquario);
+        areaEnergiaAquario.setLayout(areaEnergiaAquarioLayout);
+        areaEnergiaAquarioLayout.setHorizontalGroup(
+            areaEnergiaAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaAquarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(areaEnergia10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaEnergia10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tfSaudeAries10, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-                        .addComponent(tfTrabalhoAries10)
-                        .addComponent(tfAmorAries10)
-                        .addComponent(tituloEnergiaAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfSorteAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel44)
-                        .addComponent(jLabel43))
-                    .addComponent(jLabel46))
+                .addGroup(areaEnergiaAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaEnergiaAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(tfSaudeAquario, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                        .addComponent(tfTrabalhoAquario)
+                        .addComponent(tfAmorAquario)
+                        .addComponent(tituloEnergiaAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(saudeAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(trabalhoAquario)
+                        .addComponent(amorAquario)
+                        .addComponent(tfSorteAquario))
+                    .addComponent(sorteAquario))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
-        areaEnergia10Layout.setVerticalGroup(
-            areaEnergia10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergia10Layout.createSequentialGroup()
+        areaEnergiaAquarioLayout.setVerticalGroup(
+            areaEnergiaAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaAquarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloEnergiaAries10)
+                .addComponent(tituloEnergiaAquario)
                 .addGap(8, 8, 8)
-                .addComponent(jLabel43)
+                .addComponent(amorAquario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfAmorAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfAmorAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel44)
+                .addComponent(trabalhoAquario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tfTrabalhoAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfTrabalhoAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel45)
+                .addComponent(saudeAquario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfSaudeAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfSaudeAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel46)
+                .addComponent(sorteAquario)
                 .addGap(4, 4, 4)
-                .addComponent(tfSorteAries10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfSorteAquario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(108, 108, 108))
         );
 
-        aquario.add(areaEnergia10, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        aquario.add(areaEnergiaAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
-        tituloMensagemAries10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tituloMensagemAries10.setText("Mensagem Do Dia");
+        tituloMensagemAquario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloMensagemAquario.setText("Mensagem Do Dia");
 
-        jTextArea11.setColumns(20);
-        jTextArea11.setRows(5);
-        jScrollPane44.setViewportView(jTextArea11);
+        txMensagemAquario.setColumns(20);
+        txMensagemAquario.setRows(5);
+        jScrollPane44.setViewportView(txMensagemAquario);
 
-        btnCopiarMensagemAries10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnCopiarMensagemAries10.setText("Copiar Mensagem");
+        btnCopiarMensagemAquario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCopiarMensagemAquario.setText("Copiar Mensagem");
 
-        javax.swing.GroupLayout areaMensagem10Layout = new javax.swing.GroupLayout(areaMensagem10);
-        areaMensagem10.setLayout(areaMensagem10Layout);
-        areaMensagem10Layout.setHorizontalGroup(
-            areaMensagem10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagem10Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaMensagemAquarioLayout = new javax.swing.GroupLayout(areaMensagemAquario);
+        areaMensagemAquario.setLayout(areaMensagemAquarioLayout);
+        areaMensagemAquarioLayout.setHorizontalGroup(
+            areaMensagemAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemAquarioLayout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
-                .addGroup(areaMensagem10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(areaMensagemAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane44, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tituloMensagemAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagem10Layout.createSequentialGroup()
+                    .addComponent(tituloMensagemAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(areaMensagemAquarioLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(btnCopiarMensagemAries10)))
+                        .addComponent(btnCopiarMensagemAquario)))
                 .addGap(17, 17, 17))
         );
-        areaMensagem10Layout.setVerticalGroup(
-            areaMensagem10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaMensagem10Layout.createSequentialGroup()
+        areaMensagemAquarioLayout.setVerticalGroup(
+            areaMensagemAquarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemAquarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloMensagemAries10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloMensagemAquario, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
                 .addComponent(jScrollPane44, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCopiarMensagemAries10)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addComponent(btnCopiarMensagemAquario)
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        aquario.add(areaMensagem10, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        aquario.add(areaMensagemAquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 340, 260));
 
         fundoimagemaquario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         aquario.add(fundoimagemaquario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -8354,301 +9145,318 @@ public class Signos extends javax.swing.JFrame {
         peixes.setForeground(new java.awt.Color(255, 255, 204));
         peixes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        areaPrevisoes11.setForeground(new java.awt.Color(255, 255, 255));
+        areaPrevisoesPeixe.setForeground(new java.awt.Color(255, 255, 255));
 
-        previsaoTouro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        previsaoTouro.setText("PREVISÃO DO DIA:");
+        previsaoPeixe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        previsaoPeixe.setText("PREVISÃO DO DIA:");
 
-        txPrevisaoTouro.setColumns(20);
-        txPrevisaoTouro.setRows(5);
-        jScrollPane45.setViewportView(txPrevisaoTouro);
+        txPrevisaoPeixes.setColumns(20);
+        txPrevisaoPeixes.setRows(5);
+        jScrollPane45.setViewportView(txPrevisaoPeixes);
 
-        btnAtualizarPrevisoesTouro.setBackground(new java.awt.Color(102, 102, 255));
-        btnAtualizarPrevisoesTouro.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        btnAtualizarPrevisoesTouro.setForeground(new java.awt.Color(255, 255, 255));
-        btnAtualizarPrevisoesTouro.setText("Atualizar Previsão");
+        btnAtualizarPrevisoesPeixe.setBackground(new java.awt.Color(102, 102, 255));
+        btnAtualizarPrevisoesPeixe.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        btnAtualizarPrevisoesPeixe.setForeground(new java.awt.Color(255, 255, 255));
+        btnAtualizarPrevisoesPeixe.setText("Atualizar Previsão");
 
-        javax.swing.GroupLayout areaPrevisoes11Layout = new javax.swing.GroupLayout(areaPrevisoes11);
-        areaPrevisoes11.setLayout(areaPrevisoes11Layout);
-        areaPrevisoes11Layout.setHorizontalGroup(
-            areaPrevisoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes11Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaPrevisoesPeixeLayout = new javax.swing.GroupLayout(areaPrevisoesPeixe);
+        areaPrevisoesPeixe.setLayout(areaPrevisoesPeixeLayout);
+        areaPrevisoesPeixeLayout.setHorizontalGroup(
+            areaPrevisoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesPeixeLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(areaPrevisoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaPrevisoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnAtualizarPrevisoesTouro)
-                        .addGroup(areaPrevisoes11Layout.createSequentialGroup()
-                            .addComponent(previsaoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(areaPrevisoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaPrevisoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnAtualizarPrevisoesPeixe)
+                        .addGroup(areaPrevisoesPeixeLayout.createSequentialGroup()
+                            .addComponent(previsaoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(38, 38, 38)))
                     .addComponent(jScrollPane45, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
-        areaPrevisoes11Layout.setVerticalGroup(
-            areaPrevisoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPrevisoes11Layout.createSequentialGroup()
+        areaPrevisoesPeixeLayout.setVerticalGroup(
+            areaPrevisoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPrevisoesPeixeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(previsaoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(previsaoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane45, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAtualizarPrevisoesTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAtualizarPrevisoesPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        peixes.add(areaPrevisoes11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
+        peixes.add(areaPrevisoesPeixe, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 390, 260));
 
-        imgSigno11.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\touro.jpg")); // NOI18N
+        imgSignoPeixes.setIcon(new javax.swing.ImageIcon("C:\\Users\\GeovannaOliviera\\Documents\\ProjetoAppHoroscopo\\Horoscopo\\src\\main\\resources\\assets\\Peixes.jpg")); // NOI18N
 
-        tituloAries11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloAries11.setText("Touro");
+        tituloPeixe.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tituloPeixe.setText("Peixes");
 
-        periodoTouro.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        periodoTouro.setText("Periodo:");
+        periodoPeixe.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        periodoPeixe.setText("Periodo:");
 
-        elementoTouro.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        elementoTouro.setText("Elemento:");
+        elementoPeixe.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        elementoPeixe.setText("Elemento:");
 
-        planetaTouro.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        planetaTouro.setText("Planeta Regente:");
+        planetaPeixe.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        planetaPeixe.setText("Planeta Regente:");
 
-        corTouro.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        corTouro.setText("Cor:");
+        corPeixe.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        corPeixe.setText("Cor:");
 
-        numeroTouro.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        numeroTouro.setText("Numero Da Sorte:");
+        numeroPeixe.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        numeroPeixe.setText("Numero Da Sorte:");
 
-        javax.swing.GroupLayout areaInformacoes11Layout = new javax.swing.GroupLayout(areaInformacoes11);
-        areaInformacoes11.setLayout(areaInformacoes11Layout);
-        areaInformacoes11Layout.setHorizontalGroup(
-            areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgSigno11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(areaInformacoes11Layout.createSequentialGroup()
-                .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaInformacoes11Layout.createSequentialGroup()
+        tfPeriodoPeixe.setText("19/02 a 20/03");
+        tfPeriodoPeixe.addActionListener(this::tfPeriodoPeixeActionPerformed);
+
+        tfElementoPeixe.setText("Água");
+
+        tfPlanetaPeixe.setText("Neturno");
+
+        tfCorPeixe.setText("Azul-claro");
+
+        tfNumeroPeixe.setText("7");
+
+        javax.swing.GroupLayout areaInformacoesPeixeLayout = new javax.swing.GroupLayout(areaInformacoesPeixe);
+        areaInformacoesPeixe.setLayout(areaInformacoesPeixeLayout);
+        areaInformacoesPeixeLayout.setHorizontalGroup(
+            areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(imgSignoPeixes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
+                .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaInformacoesPeixeLayout.createSequentialGroup()
+                        .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(planetaPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(numeroPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfPlanetaPeixe)
+                            .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(tfNumeroPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(periodoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(tfPeriodoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(areaInformacoes11Layout.createSequentialGroup()
-                            .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(areaInformacoes11Layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(planetaTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(numeroTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tfPlanetaTouro)
-                                .addGroup(areaInformacoes11Layout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(tfNumeroTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaInformacoes11Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(areaInformacoes11Layout.createSequentialGroup()
-                                    .addComponent(elementoTouro)
+                        .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
+                                .addComponent(periodoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(tfPeriodoPeixe))
+                            .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
+                                    .addComponent(elementoPeixe)
                                     .addGap(32, 32, 32)
-                                    .addComponent(tfElementoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(areaInformacoes11Layout.createSequentialGroup()
-                                    .addComponent(corTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfElementoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
+                                    .addComponent(corPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(tfCorTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(tfCorPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(areaInformacoes11Layout.createSequentialGroup()
+            .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(tituloAries11, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        areaInformacoes11Layout.setVerticalGroup(
-            areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaInformacoes11Layout.createSequentialGroup()
-                .addComponent(imgSigno11, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+        areaInformacoesPeixeLayout.setVerticalGroup(
+            areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaInformacoesPeixeLayout.createSequentialGroup()
+                .addComponent(imgSignoPeixes, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tituloAries11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(periodoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPeriodoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(periodoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPeriodoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(elementoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfElementoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(elementoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfElementoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(planetaTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfPlanetaTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(planetaPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPlanetaPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(corTouro, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(tfCorTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(corPeixe, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tfCorPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(areaInformacoes11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numeroTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfNumeroTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(areaInformacoesPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numeroPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfNumeroPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        peixes.add(areaInformacoes11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
+        peixes.add(areaInformacoesPeixe, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 290, 560));
 
-        tituloCaracteristicasTouro.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        tituloCaracteristicasTouro.setText("Características");
+        tituloCaracteristicasPeixe.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        tituloCaracteristicasPeixe.setText("Características");
 
-        pForteTouro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        pForteTouro.setText("Pontos Fortes:");
+        pFortePeixe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pFortePeixe.setText("Pontos Fortes:");
 
-        pMelhorarTouro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        pMelhorarTouro.setText("Pontos a Melhorar:");
+        pMelhorarPeixe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pMelhorarPeixe.setText("Pontos a Melhorar:");
 
-        txPForteTouro.setColumns(20);
-        txPForteTouro.setRows(5);
-        jScrollPane46.setViewportView(txPForteTouro);
+        txPFortePeixe.setColumns(20);
+        txPFortePeixe.setRows(5);
+        txPFortePeixe.setText("É sensível, empático, criativo e imaginativo. Costuma perceber os sentimentos das pessoas e demonstra grande capacidade de compreensão e carinho.");
+        jScrollPane46.setViewportView(txPFortePeixe);
 
-        txpMelhorarTouro.setColumns(20);
-        txpMelhorarTouro.setRows(5);
-        jScrollPane47.setViewportView(txpMelhorarTouro);
+        txpMelhorarPeixe.setColumns(20);
+        txpMelhorarPeixe.setRows(5);
+        txpMelhorarPeixe.setText("Pode se deixar levar muito pelas emoções e ter dificuldade para estabelecer limites. Precisa desenvolver mais confiança, organização e capacidade de separar sonhos da realidade.");
+        jScrollPane47.setViewportView(txpMelhorarPeixe);
 
-        javax.swing.GroupLayout areaCaracteristicas11Layout = new javax.swing.GroupLayout(areaCaracteristicas11);
-        areaCaracteristicas11.setLayout(areaCaracteristicas11Layout);
-        areaCaracteristicas11Layout.setHorizontalGroup(
-            areaCaracteristicas11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicas11Layout.createSequentialGroup()
-                .addGroup(areaCaracteristicas11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaCaracteristicas11Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaCaracteristicasPeixeLayout = new javax.swing.GroupLayout(areaCaracteristicasPeixe);
+        areaCaracteristicasPeixe.setLayout(areaCaracteristicasPeixeLayout);
+        areaCaracteristicasPeixeLayout.setHorizontalGroup(
+            areaCaracteristicasPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasPeixeLayout.createSequentialGroup()
+                .addGroup(areaCaracteristicasPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaCaracteristicasPeixeLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addGroup(areaCaracteristicas11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(areaCaracteristicasPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pMelhorarTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pForteTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pMelhorarPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pFortePeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(areaCaracteristicas11Layout.createSequentialGroup()
+                    .addGroup(areaCaracteristicasPeixeLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(tituloCaracteristicasTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tituloCaracteristicasPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(141, Short.MAX_VALUE))
         );
-        areaCaracteristicas11Layout.setVerticalGroup(
-            areaCaracteristicas11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaCaracteristicas11Layout.createSequentialGroup()
+        areaCaracteristicasPeixeLayout.setVerticalGroup(
+            areaCaracteristicasPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaCaracteristicasPeixeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloCaracteristicasTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloCaracteristicasPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pForteTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pFortePeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pMelhorarTouro)
+                .addComponent(pMelhorarPeixe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        peixes.add(areaCaracteristicas11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
+        peixes.add(areaCaracteristicasPeixe, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 390, 290));
 
-        tituloEnergiaTouro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tituloEnergiaTouro.setText("Energia Do Dia");
+        tituloEnergiaPeixe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloEnergiaPeixe.setText("Energia Do Dia");
 
-        amorTouro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        amorTouro.setText("Amor:");
+        amorPeixe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        amorPeixe.setText("Amor:");
 
-        tabalhoTouro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tabalhoTouro.setText("Trabalho:");
+        tabalhoPeixe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tabalhoPeixe.setText("Trabalho:");
 
-        saude.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        saude.setText("Saúde:");
+        saudePeixe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        saudePeixe.setText("Saúde:");
 
-        sorteTouro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        sorteTouro.setText("Sorte:");
+        sortePeixe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        sortePeixe.setText("Sorte:");
 
-        tfSaudeTouro.addActionListener(this::tfSaudeTouroActionPerformed);
+        tfTrabalhoPeixe.setText("80%");
 
-        tfSorteTouro.addActionListener(this::tfSorteTouroActionPerformed);
+        tfSaudePeixe.setText("80%");
+        tfSaudePeixe.addActionListener(this::tfSaudePeixeActionPerformed);
 
-        tfAmorTouro.addActionListener(this::tfAmorTouroActionPerformed);
+        tfSortePeixe.setText("90%");
+        tfSortePeixe.addActionListener(this::tfSortePeixeActionPerformed);
 
-        javax.swing.GroupLayout areaEnergia11Layout = new javax.swing.GroupLayout(areaEnergia11);
-        areaEnergia11.setLayout(areaEnergia11Layout);
-        areaEnergia11Layout.setHorizontalGroup(
-            areaEnergia11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergia11Layout.createSequentialGroup()
+        tfAmorPeixe.setText("95%");
+        tfAmorPeixe.addActionListener(this::tfAmorPeixeActionPerformed);
+
+        javax.swing.GroupLayout areaEnergiaPeixeLayout = new javax.swing.GroupLayout(areaEnergiaPeixe);
+        areaEnergiaPeixe.setLayout(areaEnergiaPeixeLayout);
+        areaEnergiaPeixeLayout.setHorizontalGroup(
+            areaEnergiaPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaPeixeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(areaEnergia11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfAmorTouro)
-                    .addGroup(areaEnergia11Layout.createSequentialGroup()
-                        .addGroup(areaEnergia11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(areaEnergia11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(tfSaudeTouro, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-                                .addComponent(tfTrabalhoTouro)
-                                .addComponent(tituloEnergiaTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tfSorteTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(saude, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tabalhoTouro)
-                                .addComponent(amorTouro))
-                            .addComponent(sorteTouro))
+                .addGroup(areaEnergiaPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfAmorPeixe)
+                    .addGroup(areaEnergiaPeixeLayout.createSequentialGroup()
+                        .addGroup(areaEnergiaPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaEnergiaPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tfSaudePeixe, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                                .addComponent(tfTrabalhoPeixe)
+                                .addComponent(tituloEnergiaPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tfSortePeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(saudePeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tabalhoPeixe)
+                                .addComponent(amorPeixe))
+                            .addComponent(sortePeixe))
                         .addGap(0, 10, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        areaEnergia11Layout.setVerticalGroup(
-            areaEnergia11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaEnergia11Layout.createSequentialGroup()
+        areaEnergiaPeixeLayout.setVerticalGroup(
+            areaEnergiaPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaEnergiaPeixeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloEnergiaTouro)
+                .addComponent(tituloEnergiaPeixe)
                 .addGap(2, 2, 2)
-                .addComponent(amorTouro)
+                .addComponent(amorPeixe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfAmorTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfAmorPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tabalhoTouro)
+                .addComponent(tabalhoPeixe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tfTrabalhoTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfTrabalhoPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(saude, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(saudePeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfSaudeTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfSaudePeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(sorteTouro)
+                .addComponent(sortePeixe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfSorteTouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfSortePeixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(120, 120, 120))
         );
 
-        peixes.add(areaEnergia11, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 240));
+        peixes.add(areaEnergiaPeixe, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 40, 340, 290));
 
-        tituloMensagemTouro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tituloMensagemTouro.setText("Mensagem Do Dia");
+        tituloMensagemPeixe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tituloMensagemPeixe.setText("Mensagem Do Dia");
 
-        txMensagemdoTouro.setColumns(20);
-        txMensagemdoTouro.setRows(5);
-        jScrollPane48.setViewportView(txMensagemdoTouro);
+        txMensagemdoPeixe.setColumns(20);
+        txMensagemdoPeixe.setRows(5);
+        jScrollPane48.setViewportView(txMensagemdoPeixe);
 
-        btnCopiarMensagemTouro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnCopiarMensagemTouro.setText("Copiar Mensagem");
+        btnCopiarMensagemPeixe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCopiarMensagemPeixe.setText("Copiar Mensagem");
 
-        javax.swing.GroupLayout areaMensagem11Layout = new javax.swing.GroupLayout(areaMensagem11);
-        areaMensagem11.setLayout(areaMensagem11Layout);
-        areaMensagem11Layout.setHorizontalGroup(
-            areaMensagem11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagem11Layout.createSequentialGroup()
+        javax.swing.GroupLayout areaMensagemPeixeLayout = new javax.swing.GroupLayout(areaMensagemPeixe);
+        areaMensagemPeixe.setLayout(areaMensagemPeixeLayout);
+        areaMensagemPeixeLayout.setHorizontalGroup(
+            areaMensagemPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaMensagemPeixeLayout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
-                .addGroup(areaMensagem11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(areaMensagemPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane48, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tituloMensagemTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(areaMensagem11Layout.createSequentialGroup()
+                    .addComponent(tituloMensagemPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(areaMensagemPeixeLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(btnCopiarMensagemTouro)))
+                        .addComponent(btnCopiarMensagemPeixe)))
                 .addGap(17, 17, 17))
         );
-        areaMensagem11Layout.setVerticalGroup(
-            areaMensagem11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaMensagem11Layout.createSequentialGroup()
+        areaMensagemPeixeLayout.setVerticalGroup(
+            areaMensagemPeixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaMensagemPeixeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloMensagemTouro, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tituloMensagemPeixe, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
                 .addComponent(jScrollPane48, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCopiarMensagemTouro)
+                .addComponent(btnCopiarMensagemPeixe)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        peixes.add(areaMensagem11, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 340, 200));
+        peixes.add(areaMensagemPeixe, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 380, 340, 200));
 
         fundoimagempeixes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/imagenfundo.png"))); // NOI18N
         peixes.add(fundoimagempeixes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
@@ -8692,25 +9500,25 @@ public class Signos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfSaudeSagitarioActionPerformed
 
-    private void tfSaudeAries1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudeAries1ActionPerformed
+    private void tfSaudeCapricornioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudeCapricornioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfSaudeAries1ActionPerformed
+    }//GEN-LAST:event_tfSaudeCapricornioActionPerformed
 
-    private void tfSaudeAries10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudeAries10ActionPerformed
+    private void tfSaudeAquarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudeAquarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfSaudeAries10ActionPerformed
+    }//GEN-LAST:event_tfSaudeAquarioActionPerformed
 
-    private void tfSaudeTouroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudeTouroActionPerformed
+    private void tfSaudePeixeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudePeixeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfSaudeTouroActionPerformed
+    }//GEN-LAST:event_tfSaudePeixeActionPerformed
 
-    private void tfAmorTouroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAmorTouroActionPerformed
+    private void tfAmorPeixeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAmorPeixeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfAmorTouroActionPerformed
+    }//GEN-LAST:event_tfAmorPeixeActionPerformed
 
-    private void tfSorteTouroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSorteTouroActionPerformed
+    private void tfSortePeixeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSortePeixeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfSorteTouroActionPerformed
+    }//GEN-LAST:event_tfSortePeixeActionPerformed
 
     private void tfSaudeTouro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudeTouro1ActionPerformed
         // TODO add your handling code here:
@@ -8788,6 +9596,58 @@ public class Signos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfAmorTouro3ActionPerformed
 
+    private void tfTrabalhoAriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTrabalhoAriesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfTrabalhoAriesActionPerformed
+
+    private void tfAmorGemeosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAmorGemeosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAmorGemeosActionPerformed
+
+    private void tfCorCancerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCorCancerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCorCancerActionPerformed
+
+    private void tfTrabalhoCancerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTrabalhoCancerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfTrabalhoCancerActionPerformed
+
+    private void tfAmorCancerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAmorCancerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAmorCancerActionPerformed
+
+    private void tfTrabalhoLibraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTrabalhoLibraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfTrabalhoLibraActionPerformed
+
+    private void tfSorteSagitarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSorteSagitarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfSorteSagitarioActionPerformed
+
+    private void tfNumeroCapricornioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNumeroCapricornioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNumeroCapricornioActionPerformed
+
+    private void tfPeriodoAquarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPeriodoAquarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPeriodoAquarioActionPerformed
+
+    private void tfPeriodoPeixeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPeriodoPeixeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPeriodoPeixeActionPerformed
+
+    private void tfTrabalhoEscorpiaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTrabalhoEscorpiaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfTrabalhoEscorpiaoActionPerformed
+
+    private void tfSaudeEscorpiaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSaudeEscorpiaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfSaudeEscorpiaoActionPerformed
+
+    private void tfSorteEscorpiaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSorteEscorpiaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfSorteEscorpiaoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -8814,15 +9674,19 @@ public class Signos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel amorAquario;
+    private javax.swing.JLabel amorAries;
     private javax.swing.JLabel amorCancer;
     private javax.swing.JLabel amorCancer1;
+    private javax.swing.JLabel amorCapricornio;
+    private javax.swing.JLabel amorEscorpiao;
     private javax.swing.JLabel amorGemeos;
     private javax.swing.JLabel amorGemeos1;
     private javax.swing.JLabel amorLeao;
     private javax.swing.JLabel amorLeao1;
     private javax.swing.JLabel amorLibra;
+    private javax.swing.JLabel amorPeixe;
     private javax.swing.JLabel amorSagitario;
-    private javax.swing.JLabel amorTouro;
     private javax.swing.JLabel amorTouro1;
     private javax.swing.JLabel amorTouro2;
     private javax.swing.JLabel amorTouro3;
@@ -8833,10 +9697,6 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTabbedPane areaAbas;
     private javax.swing.JTabbedPane areaAbas1;
     private javax.swing.JPanel areaCaracteristicaCapricornio;
-    private javax.swing.JPanel areaCaracteristicas;
-    private javax.swing.JPanel areaCaracteristicas10;
-    private javax.swing.JPanel areaCaracteristicas11;
-    private javax.swing.JPanel areaCaracteristicas12;
     private javax.swing.JPanel areaCaracteristicas13;
     private javax.swing.JPanel areaCaracteristicas14;
     private javax.swing.JPanel areaCaracteristicas15;
@@ -8846,24 +9706,25 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JPanel areaCaracteristicas2;
     private javax.swing.JPanel areaCaracteristicas3;
     private javax.swing.JPanel areaCaracteristicas8;
+    private javax.swing.JPanel areaCaracteristicasAquario;
+    private javax.swing.JPanel areaCaracteristicasAries;
     private javax.swing.JPanel areaCaracteristicasCancer;
     private javax.swing.JPanel areaCaracteristicasCancer1;
+    private javax.swing.JPanel areaCaracteristicasEscorpiao;
     private javax.swing.JPanel areaCaracteristicasGemeos;
     private javax.swing.JPanel areaCaracteristicasGemeos1;
     private javax.swing.JPanel areaCaracteristicasLeao;
     private javax.swing.JPanel areaCaracteristicasLeao1;
     private javax.swing.JPanel areaCaracteristicasLibra;
+    private javax.swing.JPanel areaCaracteristicasPeixe;
     private javax.swing.JPanel areaCaracteristicasSagitario;
+    private javax.swing.JPanel areaCaracteristicasTouro;
     private javax.swing.JPanel areaCaracteristicasVirgem;
     private javax.swing.JPanel areaCaracteristicasVirgem1;
     private javax.swing.JPanel areaCompatibilidade;
     private javax.swing.JPanel areaCompatibilidade1;
     private javax.swing.JPanel areaDescobrirSigno;
     private javax.swing.JPanel areaDescobrirSigno1;
-    private javax.swing.JPanel areaEnergia;
-    private javax.swing.JPanel areaEnergia1;
-    private javax.swing.JPanel areaEnergia10;
-    private javax.swing.JPanel areaEnergia11;
     private javax.swing.JPanel areaEnergia12;
     private javax.swing.JPanel areaEnergia13;
     private javax.swing.JPanel areaEnergia14;
@@ -8874,20 +9735,21 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JPanel areaEnergia2;
     private javax.swing.JPanel areaEnergia3;
     private javax.swing.JPanel areaEnergia8;
+    private javax.swing.JPanel areaEnergiaAquario;
+    private javax.swing.JPanel areaEnergiaAries;
     private javax.swing.JPanel areaEnergiaCancer;
     private javax.swing.JPanel areaEnergiaCancer1;
+    private javax.swing.JPanel areaEnergiaCapricornio;
+    private javax.swing.JPanel areaEnergiaEscorpiao;
     private javax.swing.JPanel areaEnergiaGemeos;
     private javax.swing.JPanel areaEnergiaGemeos1;
     private javax.swing.JPanel areaEnergiaLeao;
     private javax.swing.JPanel areaEnergiaLeao1;
     private javax.swing.JPanel areaEnergiaLibra;
+    private javax.swing.JPanel areaEnergiaPeixe;
     private javax.swing.JPanel areaEnergiaSagitario;
     private javax.swing.JPanel areaEnergiaVirgem;
     private javax.swing.JPanel areaEnergiaVirgem1;
-    private javax.swing.JPanel areaInformacoes;
-    private javax.swing.JPanel areaInformacoes10;
-    private javax.swing.JPanel areaInformacoes11;
-    private javax.swing.JPanel areaInformacoes12;
     private javax.swing.JPanel areaInformacoes13;
     private javax.swing.JPanel areaInformacoes14;
     private javax.swing.JPanel areaInformacoes15;
@@ -8897,22 +9759,22 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JPanel areaInformacoes2;
     private javax.swing.JPanel areaInformacoes3;
     private javax.swing.JPanel areaInformacoes8;
+    private javax.swing.JPanel areaInformacoesAquario;
+    private javax.swing.JPanel areaInformacoesAries;
     private javax.swing.JPanel areaInformacoesCancer;
     private javax.swing.JPanel areaInformacoesCancer1;
     private javax.swing.JPanel areaInformacoesCapricornio;
+    private javax.swing.JPanel areaInformacoesEscorpiao;
     private javax.swing.JPanel areaInformacoesGemeos;
     private javax.swing.JPanel areaInformacoesGemeos1;
     private javax.swing.JPanel areaInformacoesLeao;
     private javax.swing.JPanel areaInformacoesLeao1;
     private javax.swing.JPanel areaInformacoesLibra;
+    private javax.swing.JPanel areaInformacoesPeixe;
     private javax.swing.JPanel areaInformacoesSagitario;
+    private javax.swing.JPanel areaInformacoesTouro;
     private javax.swing.JPanel areaInformacoesVirgem;
     private javax.swing.JPanel areaInformacoesVirgem1;
-    private javax.swing.JPanel areaMensagem;
-    private javax.swing.JPanel areaMensagem1;
-    private javax.swing.JPanel areaMensagem10;
-    private javax.swing.JPanel areaMensagem11;
-    private javax.swing.JPanel areaMensagem12;
     private javax.swing.JPanel areaMensagem13;
     private javax.swing.JPanel areaMensagem14;
     private javax.swing.JPanel areaMensagem15;
@@ -8922,21 +9784,22 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JPanel areaMensagem2;
     private javax.swing.JPanel areaMensagem3;
     private javax.swing.JPanel areaMensagem8;
+    private javax.swing.JPanel areaMensagemAquario;
+    private javax.swing.JPanel areaMensagemAries;
     private javax.swing.JPanel areaMensagemCancer;
     private javax.swing.JPanel areaMensagemCancer1;
+    private javax.swing.JPanel areaMensagemCapricornio;
+    private javax.swing.JPanel areaMensagemEscoripiao;
     private javax.swing.JPanel areaMensagemGemeos;
     private javax.swing.JPanel areaMensagemGemeos1;
     private javax.swing.JPanel areaMensagemLeao;
     private javax.swing.JPanel areaMensagemLeao1;
     private javax.swing.JPanel areaMensagemLibra;
+    private javax.swing.JPanel areaMensagemPeixe;
     private javax.swing.JPanel areaMensagemSagitario;
+    private javax.swing.JPanel areaMensagemTouro;
     private javax.swing.JPanel areaMensagemVirgem;
     private javax.swing.JPanel areaMensagemVirgem1;
-    private javax.swing.JPanel areaPrevisoes;
-    private javax.swing.JPanel areaPrevisoes1;
-    private javax.swing.JPanel areaPrevisoes10;
-    private javax.swing.JPanel areaPrevisoes11;
-    private javax.swing.JPanel areaPrevisoes12;
     private javax.swing.JPanel areaPrevisoes13;
     private javax.swing.JPanel areaPrevisoes14;
     private javax.swing.JPanel areaPrevisoes15;
@@ -8946,23 +9809,28 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JPanel areaPrevisoes2;
     private javax.swing.JPanel areaPrevisoes3;
     private javax.swing.JPanel areaPrevisoes8;
+    private javax.swing.JPanel areaPrevisoesAquario;
+    private javax.swing.JPanel areaPrevisoesAries;
     private javax.swing.JPanel areaPrevisoesCancer;
     private javax.swing.JPanel areaPrevisoesCancer1;
+    private javax.swing.JPanel areaPrevisoesCapricornio;
+    private javax.swing.JPanel areaPrevisoesEscorpiao;
     private javax.swing.JPanel areaPrevisoesGemeos;
     private javax.swing.JPanel areaPrevisoesGemeos1;
     private javax.swing.JPanel areaPrevisoesLeao;
     private javax.swing.JPanel areaPrevisoesLeao1;
     private javax.swing.JPanel areaPrevisoesLibra;
+    private javax.swing.JPanel areaPrevisoesPeixe;
     private javax.swing.JPanel areaPrevisoesSagitario;
+    private javax.swing.JPanel areaPrevisoesTouro;
     private javax.swing.JPanel areaPrevisoesVirgem;
     private javax.swing.JPanel areaPrevisoesVirgem1;
     private javax.swing.JPanel areaResultado;
     private javax.swing.JPanel areaResultado1;
     private javax.swing.JPanel aries;
     private javax.swing.JPanel aries1;
+    private javax.swing.JButton btnAtualizarPrevisoesAquario;
     private javax.swing.JButton btnAtualizarPrevisoesAries;
-    private javax.swing.JButton btnAtualizarPrevisoesAries1;
-    private javax.swing.JButton btnAtualizarPrevisoesAries10;
     private javax.swing.JButton btnAtualizarPrevisoesAries11;
     private javax.swing.JButton btnAtualizarPrevisoesAries12;
     private javax.swing.JButton btnAtualizarPrevisoesAries13;
@@ -8972,13 +9840,15 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JButton btnAtualizarPrevisoesAries8;
     private javax.swing.JButton btnAtualizarPrevisoesCancer;
     private javax.swing.JButton btnAtualizarPrevisoesCancer1;
+    private javax.swing.JButton btnAtualizarPrevisoesCapricornio;
+    private javax.swing.JButton btnAtualizarPrevisoesEscorpiao;
     private javax.swing.JButton btnAtualizarPrevisoesGemeos;
     private javax.swing.JButton btnAtualizarPrevisoesGemeos1;
     private javax.swing.JButton btnAtualizarPrevisoesLeao;
     private javax.swing.JButton btnAtualizarPrevisoesLeao1;
     private javax.swing.JButton btnAtualizarPrevisoesLibra;
+    private javax.swing.JButton btnAtualizarPrevisoesPeixe;
     private javax.swing.JButton btnAtualizarPrevisoesSagitario;
-    private javax.swing.JButton btnAtualizarPrevisoesTouro;
     private javax.swing.JButton btnAtualizarPrevisoesTouro1;
     private javax.swing.JButton btnAtualizarPrevisoesTouro2;
     private javax.swing.JButton btnAtualizarPrevisoesTouro3;
@@ -8986,9 +9856,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JButton btnAtualizarPrevisoesVirgem1;
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnCalcular1;
+    private javax.swing.JButton btnCopiarMensagemAquario;
     private javax.swing.JButton btnCopiarMensagemAries;
-    private javax.swing.JButton btnCopiarMensagemAries1;
-    private javax.swing.JButton btnCopiarMensagemAries10;
     private javax.swing.JButton btnCopiarMensagemAries11;
     private javax.swing.JButton btnCopiarMensagemAries12;
     private javax.swing.JButton btnCopiarMensagemAries13;
@@ -8998,13 +9867,15 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JButton btnCopiarMensagemAries8;
     private javax.swing.JButton btnCopiarMensagemCancer;
     private javax.swing.JButton btnCopiarMensagemCancer1;
+    private javax.swing.JButton btnCopiarMensagemCapricornio;
+    private javax.swing.JButton btnCopiarMensagemEscorpiao;
     private javax.swing.JButton btnCopiarMensagemGemeos;
     private javax.swing.JButton btnCopiarMensagemGemeos1;
     private javax.swing.JButton btnCopiarMensagemLeao;
     private javax.swing.JButton btnCopiarMensagemLeao1;
     private javax.swing.JButton btnCopiarMensagemLibra;
+    private javax.swing.JButton btnCopiarMensagemPeixe;
     private javax.swing.JButton btnCopiarMensagemSagitario;
-    private javax.swing.JButton btnCopiarMensagemTouro;
     private javax.swing.JButton btnCopiarMensagemTouro1;
     private javax.swing.JButton btnCopiarMensagemTouro2;
     private javax.swing.JButton btnCopiarMensagemTouro3;
@@ -9028,8 +9899,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbSigno4;
     private javax.swing.JLabel compatibilidade;
     private javax.swing.JLabel compatibilidade1;
+    private javax.swing.JLabel corAquario;
     private javax.swing.JLabel corAries;
-    private javax.swing.JLabel corAries10;
     private javax.swing.JLabel corAries11;
     private javax.swing.JLabel corAries12;
     private javax.swing.JLabel corAries13;
@@ -9040,13 +9911,14 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel corCancer;
     private javax.swing.JLabel corCancer1;
     private javax.swing.JLabel corCapricornio;
+    private javax.swing.JLabel corEscorpiao;
     private javax.swing.JLabel corGemeos;
     private javax.swing.JLabel corGemeos1;
     private javax.swing.JLabel corLeao;
     private javax.swing.JLabel corLeao1;
     private javax.swing.JLabel corLibra;
+    private javax.swing.JLabel corPeixe;
     private javax.swing.JLabel corSagitario;
-    private javax.swing.JLabel corTouro;
     private javax.swing.JLabel corTouro1;
     private javax.swing.JLabel corTouro2;
     private javax.swing.JLabel corTouro3;
@@ -9056,8 +9928,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel descubraSeuSigno1;
     private javax.swing.JLabel diaNascimento;
     private javax.swing.JLabel diaNascimento1;
+    private javax.swing.JLabel elementoAquario;
     private javax.swing.JLabel elementoAries;
-    private javax.swing.JLabel elementoAries10;
     private javax.swing.JLabel elementoAries11;
     private javax.swing.JLabel elementoAries12;
     private javax.swing.JLabel elementoAries13;
@@ -9068,13 +9940,14 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel elementoCancer;
     private javax.swing.JLabel elementoCancer1;
     private javax.swing.JLabel elementoCapricornio;
+    private javax.swing.JLabel elementoEscorpiao;
     private javax.swing.JLabel elementoGemeos;
     private javax.swing.JLabel elementoGemeos1;
     private javax.swing.JLabel elementoLeao;
     private javax.swing.JLabel elementoLeao1;
     private javax.swing.JLabel elementoLibra;
+    private javax.swing.JLabel elementoPeixe;
     private javax.swing.JLabel elementoSagitario;
-    private javax.swing.JLabel elementoTouro;
     private javax.swing.JLabel elementoTouro1;
     private javax.swing.JLabel elementoTouro2;
     private javax.swing.JLabel elementoTouro3;
@@ -9082,6 +9955,7 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel elementoVirgem1;
     private javax.swing.JPanel escorpiao;
     private javax.swing.JPanel escorpiao1;
+    private javax.swing.JLabel fundoImagemEscorpiao;
     private javax.swing.JLabel fundoimagemaquario;
     private javax.swing.JLabel fundoimagemaquario1;
     private javax.swing.JLabel fundoimagemcancer;
@@ -9111,11 +9985,6 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel imagemfundoinicio1;
     private javax.swing.JLabel imagemfundotouro;
     private javax.swing.JLabel imagemfundotouro1;
-    private javax.swing.JLabel imgSigno;
-    private javax.swing.JLabel imgSigno1;
-    private javax.swing.JLabel imgSigno10;
-    private javax.swing.JLabel imgSigno11;
-    private javax.swing.JLabel imgSigno12;
     private javax.swing.JLabel imgSigno13;
     private javax.swing.JLabel imgSigno14;
     private javax.swing.JLabel imgSigno15;
@@ -9125,21 +9994,27 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel imgSigno19;
     private javax.swing.JLabel imgSigno2;
     private javax.swing.JLabel imgSigno3;
-    private javax.swing.JLabel imgSigno6;
-    private javax.swing.JLabel imgSigno7;
     private javax.swing.JLabel imgSigno8;
-    private javax.swing.JLabel imgSigno9;
+    private javax.swing.JLabel imgSignoAquario;
+    private javax.swing.JLabel imgSignoAries;
     private javax.swing.JLabel imgSignoCancer;
     private javax.swing.JLabel imgSignoCancer1;
+    private javax.swing.JLabel imgSignoCapricornio;
+    private javax.swing.JLabel imgSignoEscorpiao;
     private javax.swing.JLabel imgSignoGemeos;
     private javax.swing.JLabel imgSignoGemeos1;
     private javax.swing.JLabel imgSignoLeao;
     private javax.swing.JLabel imgSignoLeao1;
+    private javax.swing.JLabel imgSignoLibra;
+    private javax.swing.JLabel imgSignoPeixes;
+    private javax.swing.JLabel imgSignoSagitario;
+    private javax.swing.JLabel imgSignoTouro;
+    private javax.swing.JLabel imgSignoVirgem;
     private javax.swing.JPanel iniciio;
     private javax.swing.JPanel iniciio1;
     private javax.swing.JPanel inicio;
+    private javax.swing.JPanel iscorpiao;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -9148,20 +10023,13 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -9172,15 +10040,12 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane100;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
@@ -9275,13 +10140,13 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane94;
     private javax.swing.JScrollPane jScrollPane95;
     private javax.swing.JScrollPane jScrollPane96;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea11;
+    private javax.swing.JScrollPane jScrollPane97;
+    private javax.swing.JScrollPane jScrollPane98;
+    private javax.swing.JScrollPane jScrollPane99;
     private javax.swing.JTextArea jTextArea12;
     private javax.swing.JTextArea jTextArea13;
     private javax.swing.JTextArea jTextArea14;
     private javax.swing.JTextArea jTextArea15;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextArea jTextArea9;
@@ -9297,8 +10162,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel nSorteLeao1;
     private javax.swing.JLabel nome;
     private javax.swing.JLabel nome1;
+    private javax.swing.JLabel numeroAquario;
     private javax.swing.JLabel numeroAries;
-    private javax.swing.JLabel numeroAries10;
     private javax.swing.JLabel numeroAries11;
     private javax.swing.JLabel numeroAries12;
     private javax.swing.JLabel numeroAries13;
@@ -9309,19 +10174,19 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel numeroCancer;
     private javax.swing.JLabel numeroCancer1;
     private javax.swing.JLabel numeroCapricornio;
+    private javax.swing.JLabel numeroEscorpiao;
     private javax.swing.JLabel numeroGemeos;
     private javax.swing.JLabel numeroGemeos1;
     private javax.swing.JLabel numeroLibra;
+    private javax.swing.JLabel numeroPeixe;
     private javax.swing.JLabel numeroSagitario;
-    private javax.swing.JLabel numeroTouro;
     private javax.swing.JLabel numeroTouro1;
     private javax.swing.JLabel numeroTouro2;
     private javax.swing.JLabel numeroTouro3;
     private javax.swing.JLabel numeroVirgem;
     private javax.swing.JLabel numeroVirgem1;
-    private javax.swing.JLabel pForesAries;
+    private javax.swing.JLabel pForesAquario;
     private javax.swing.JLabel pForesAries1;
-    private javax.swing.JLabel pForesAries10;
     private javax.swing.JLabel pForesAries11;
     private javax.swing.JLabel pForesAries12;
     private javax.swing.JLabel pForesAries13;
@@ -9330,22 +10195,24 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel pForesAries8;
     private javax.swing.JLabel pForteGemeos;
     private javax.swing.JLabel pForteGemeos1;
-    private javax.swing.JLabel pForteTouro;
+    private javax.swing.JLabel pFortePeixe;
     private javax.swing.JLabel pForteTouro1;
     private javax.swing.JLabel pForteTouro2;
     private javax.swing.JLabel pForteTouro3;
+    private javax.swing.JLabel pFortesAries;
     private javax.swing.JLabel pFortesCancer;
     private javax.swing.JLabel pFortesCancer1;
     private javax.swing.JLabel pFortesCapricornio;
+    private javax.swing.JLabel pFortesEscorpiao;
     private javax.swing.JLabel pFortesLeao;
     private javax.swing.JLabel pFortesLeao1;
     private javax.swing.JLabel pFortesLibra;
     private javax.swing.JLabel pFortesSagitario;
     private javax.swing.JLabel pFortesVirgem;
     private javax.swing.JLabel pFortesVirgem1;
+    private javax.swing.JLabel pMelhorarAquario;
     private javax.swing.JLabel pMelhorarAries;
     private javax.swing.JLabel pMelhorarAries1;
-    private javax.swing.JLabel pMelhorarAries10;
     private javax.swing.JLabel pMelhorarAries11;
     private javax.swing.JLabel pMelhorarAries12;
     private javax.swing.JLabel pMelhorarAries13;
@@ -9355,13 +10222,14 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel pMelhorarCancer;
     private javax.swing.JLabel pMelhorarCancer1;
     private javax.swing.JLabel pMelhorarCapricornio;
+    private javax.swing.JLabel pMelhorarEscorpiao;
     private javax.swing.JLabel pMelhorarGemeos;
     private javax.swing.JLabel pMelhorarGemeos1;
     private javax.swing.JLabel pMelhorarLeao;
     private javax.swing.JLabel pMelhorarLeao1;
     private javax.swing.JLabel pMelhorarLibra;
+    private javax.swing.JLabel pMelhorarPeixe;
     private javax.swing.JLabel pMelhorarSagitario;
-    private javax.swing.JLabel pMelhorarTouro;
     private javax.swing.JLabel pMelhorarTouro1;
     private javax.swing.JLabel pMelhorarTouro2;
     private javax.swing.JLabel pMelhorarTouro3;
@@ -9369,8 +10237,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel pMelhorarVirgem1;
     private javax.swing.JPanel peixes;
     private javax.swing.JPanel peixes1;
+    private javax.swing.JLabel periodoAquario;
     private javax.swing.JLabel periodoAries;
-    private javax.swing.JLabel periodoAries10;
     private javax.swing.JLabel periodoAries11;
     private javax.swing.JLabel periodoAries12;
     private javax.swing.JLabel periodoAries13;
@@ -9381,20 +10249,21 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel periodoCancer;
     private javax.swing.JLabel periodoCancer1;
     private javax.swing.JLabel periodoCapricornio;
+    private javax.swing.JLabel periodoEscorpiao;
     private javax.swing.JLabel periodoGemeos;
     private javax.swing.JLabel periodoGemeos1;
     private javax.swing.JLabel periodoLeao;
     private javax.swing.JLabel periodoLeao1;
     private javax.swing.JLabel periodoLibra;
+    private javax.swing.JLabel periodoPeixe;
     private javax.swing.JLabel periodoSagitario;
-    private javax.swing.JLabel periodoTouro;
     private javax.swing.JLabel periodoTouro1;
     private javax.swing.JLabel periodoTouro2;
     private javax.swing.JLabel periodoTouro3;
     private javax.swing.JLabel periodoVirgem;
     private javax.swing.JLabel periodoVirgem1;
+    private javax.swing.JLabel planetaAquario;
     private javax.swing.JLabel planetaAries;
-    private javax.swing.JLabel planetaAries10;
     private javax.swing.JLabel planetaAries11;
     private javax.swing.JLabel planetaAries12;
     private javax.swing.JLabel planetaAries13;
@@ -9405,21 +10274,21 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel planetaCancer;
     private javax.swing.JLabel planetaCancer1;
     private javax.swing.JLabel planetaCapricornio;
+    private javax.swing.JLabel planetaEscorpiao;
     private javax.swing.JLabel planetaGemeos;
     private javax.swing.JLabel planetaGemeos1;
     private javax.swing.JLabel planetaLeao;
     private javax.swing.JLabel planetaLeao1;
     private javax.swing.JLabel planetaLibra;
+    private javax.swing.JLabel planetaPeixe;
     private javax.swing.JLabel planetaSagitario;
-    private javax.swing.JLabel planetaTouro;
     private javax.swing.JLabel planetaTouro1;
     private javax.swing.JLabel planetaTouro2;
     private javax.swing.JLabel planetaTouro3;
     private javax.swing.JLabel planetaVirgem;
     private javax.swing.JLabel planetaVirgem1;
+    private javax.swing.JLabel previsaoAquario;
     private javax.swing.JLabel previsaoAries;
-    private javax.swing.JLabel previsaoAries1;
-    private javax.swing.JLabel previsaoAries10;
     private javax.swing.JLabel previsaoAries11;
     private javax.swing.JLabel previsaoAries12;
     private javax.swing.JLabel previsaoAries13;
@@ -9429,13 +10298,15 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel previsaoAries8;
     private javax.swing.JLabel previsaoCancer;
     private javax.swing.JLabel previsaoCancer1;
+    private javax.swing.JLabel previsaoCapricornio;
+    private javax.swing.JLabel previsaoEscorpiao;
     private javax.swing.JLabel previsaoGemeos;
     private javax.swing.JLabel previsaoGemeos1;
     private javax.swing.JLabel previsaoLeao;
     private javax.swing.JLabel previsaoLeao1;
     private javax.swing.JLabel previsaoLibra;
+    private javax.swing.JLabel previsaoPeixe;
     private javax.swing.JLabel previsaoSagitario;
-    private javax.swing.JLabel previsaoTouro;
     private javax.swing.JLabel previsaoTouro1;
     private javax.swing.JLabel previsaoTouro2;
     private javax.swing.JLabel previsaoTouro3;
@@ -9443,17 +10314,21 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel previsaoVirgem1;
     private javax.swing.JPanel sagitario;
     private javax.swing.JPanel sagitario1;
-    private javax.swing.JLabel saude;
     private javax.swing.JLabel saude1;
     private javax.swing.JLabel saude2;
     private javax.swing.JLabel saude3;
+    private javax.swing.JLabel saudeAquario;
+    private javax.swing.JLabel saudeAries;
     private javax.swing.JLabel saudeCancer;
     private javax.swing.JLabel saudeCancer1;
+    private javax.swing.JLabel saudeCapricornio;
+    private javax.swing.JLabel saudeEscorpiao;
     private javax.swing.JLabel saudeGemeos;
     private javax.swing.JLabel saudeGemeos1;
     private javax.swing.JLabel saudeLeao;
     private javax.swing.JLabel saudeLeao1;
     private javax.swing.JLabel saudeLibra;
+    private javax.swing.JLabel saudePeixe;
     private javax.swing.JLabel saudeSagitario;
     private javax.swing.JLabel saudeVirgem;
     private javax.swing.JLabel saudeVirgem1;
@@ -9463,27 +10338,30 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel signo3;
     private javax.swing.JLabel signo4;
     private javax.swing.JLabel signo5;
+    private javax.swing.JLabel sorteAquario;
+    private javax.swing.JLabel sorteAries;
     private javax.swing.JLabel sorteCancer;
     private javax.swing.JLabel sorteCancer1;
+    private javax.swing.JLabel sorteCapricornio;
+    private javax.swing.JLabel sorteEscorpiao;
     private javax.swing.JLabel sorteGemeos;
     private javax.swing.JLabel sorteGemeos1;
     private javax.swing.JLabel sorteLeao;
     private javax.swing.JLabel sorteLeao1;
     private javax.swing.JLabel sorteLibra;
+    private javax.swing.JLabel sortePeixe;
     private javax.swing.JLabel sorteSagitario;
-    private javax.swing.JLabel sorteTouro;
     private javax.swing.JLabel sorteTouro1;
     private javax.swing.JLabel sorteTouro2;
     private javax.swing.JLabel sorteTouro3;
     private javax.swing.JLabel sorteVirgem;
     private javax.swing.JLabel sorteVirgem1;
-    private javax.swing.JLabel tabalhoTouro;
+    private javax.swing.JLabel tabalhoPeixe;
     private javax.swing.JLabel tabalhoTouro1;
     private javax.swing.JLabel tabalhoTouro2;
     private javax.swing.JLabel tabalhoTouro3;
+    private javax.swing.JTextField tfAmorAquario;
     private javax.swing.JTextField tfAmorAries;
-    private javax.swing.JTextField tfAmorAries1;
-    private javax.swing.JTextField tfAmorAries10;
     private javax.swing.JTextField tfAmorAries11;
     private javax.swing.JTextField tfAmorAries12;
     private javax.swing.JTextField tfAmorAries13;
@@ -9493,13 +10371,15 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfAmorAries8;
     private javax.swing.JTextField tfAmorCancer;
     private javax.swing.JTextField tfAmorCancer1;
+    private javax.swing.JTextField tfAmorCapricornio;
+    private javax.swing.JTextField tfAmorEscorpiao;
     private javax.swing.JTextField tfAmorGemeos;
     private javax.swing.JTextField tfAmorGemeos1;
     private javax.swing.JTextField tfAmorLeao;
     private javax.swing.JTextField tfAmorLeao1;
     private javax.swing.JTextField tfAmorLibra;
+    private javax.swing.JTextField tfAmorPeixe;
     private javax.swing.JTextField tfAmorSagitario;
-    private javax.swing.JTextField tfAmorTouro;
     private javax.swing.JTextField tfAmorTouro1;
     private javax.swing.JTextField tfAmorTouro2;
     private javax.swing.JTextField tfAmorTouro3;
@@ -9507,8 +10387,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfAmorVirgem1;
     private javax.swing.JTextField tfCompatibilidade;
     private javax.swing.JTextField tfCompatibilidade1;
+    private javax.swing.JTextField tfCorAquario;
     private javax.swing.JTextField tfCorAries;
-    private javax.swing.JTextField tfCorAries10;
     private javax.swing.JTextField tfCorAries11;
     private javax.swing.JTextField tfCorAries12;
     private javax.swing.JTextField tfCorAries13;
@@ -9519,20 +10399,21 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfCorCancer;
     private javax.swing.JTextField tfCorCancer1;
     private javax.swing.JTextField tfCorCapricornio;
+    private javax.swing.JTextField tfCorEscorpiao;
     private javax.swing.JTextField tfCorGemeos;
     private javax.swing.JTextField tfCorGemeos1;
     private javax.swing.JTextField tfCorLeao;
     private javax.swing.JTextField tfCorLeao1;
     private javax.swing.JTextField tfCorLibra;
+    private javax.swing.JTextField tfCorPeixe;
     private javax.swing.JTextField tfCorSagitario;
-    private javax.swing.JTextField tfCorTouro;
     private javax.swing.JTextField tfCorTouro1;
     private javax.swing.JTextField tfCorTouro2;
     private javax.swing.JTextField tfCorTouro3;
     private javax.swing.JTextField tfCorVirgem;
     private javax.swing.JTextField tfCorVirgem1;
+    private javax.swing.JTextField tfElementoAquario;
     private javax.swing.JTextField tfElementoAries;
-    private javax.swing.JTextField tfElementoAries10;
     private javax.swing.JTextField tfElementoAries11;
     private javax.swing.JTextField tfElementoAries12;
     private javax.swing.JTextField tfElementoAries13;
@@ -9543,13 +10424,14 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfElementoCancer;
     private javax.swing.JTextField tfElementoCancer1;
     private javax.swing.JTextField tfElementoCapricornio;
+    private javax.swing.JTextField tfElementoEscorpiao;
     private javax.swing.JTextField tfElementoGemeos;
     private javax.swing.JTextField tfElementoGemeos1;
     private javax.swing.JTextField tfElementoLeao;
     private javax.swing.JTextField tfElementoLeao1;
     private javax.swing.JTextField tfElementoLibra;
+    private javax.swing.JTextField tfElementoPeixe;
     private javax.swing.JTextField tfElementoSagitario;
-    private javax.swing.JTextField tfElementoTouro;
     private javax.swing.JTextField tfElementoTouro1;
     private javax.swing.JTextField tfElementoTouro2;
     private javax.swing.JTextField tfElementoTouro3;
@@ -9557,8 +10439,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfElementoVirgem1;
     private javax.swing.JTextField tfNome;
     private javax.swing.JTextField tfNome1;
+    private javax.swing.JTextField tfNumeroAquario;
     private javax.swing.JTextField tfNumeroAries;
-    private javax.swing.JTextField tfNumeroAries10;
     private javax.swing.JTextField tfNumeroAries11;
     private javax.swing.JTextField tfNumeroAries12;
     private javax.swing.JTextField tfNumeroAries13;
@@ -9569,20 +10451,23 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfNumeroCancer;
     private javax.swing.JTextField tfNumeroCancer1;
     private javax.swing.JTextField tfNumeroCapricornio;
+    private javax.swing.JTextField tfNumeroEscorpiao;
     private javax.swing.JTextField tfNumeroGemeos;
     private javax.swing.JTextField tfNumeroGemeos1;
     private javax.swing.JTextField tfNumeroLeao;
     private javax.swing.JTextField tfNumeroLeao1;
     private javax.swing.JTextField tfNumeroLibra;
+    private javax.swing.JTextField tfNumeroPeixe;
     private javax.swing.JTextField tfNumeroSagitario;
-    private javax.swing.JTextField tfNumeroTouro;
     private javax.swing.JTextField tfNumeroTouro1;
     private javax.swing.JTextField tfNumeroTouro2;
     private javax.swing.JTextField tfNumeroTouro3;
     private javax.swing.JTextField tfNumeroVirgem;
     private javax.swing.JTextField tfNumeroVirgem1;
+    private javax.swing.JTextArea tfPFortesAries;
+    private javax.swing.JTextArea tfPFortesEscorpiao;
+    private javax.swing.JTextField tfPeriodoAquario;
     private javax.swing.JTextField tfPeriodoAries;
-    private javax.swing.JTextField tfPeriodoAries10;
     private javax.swing.JTextField tfPeriodoAries11;
     private javax.swing.JTextField tfPeriodoAries12;
     private javax.swing.JTextField tfPeriodoAries13;
@@ -9593,20 +10478,21 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfPeriodoCancer;
     private javax.swing.JTextField tfPeriodoCancer1;
     private javax.swing.JTextField tfPeriodoCapricornio;
+    private javax.swing.JTextField tfPeriodoEscorpiao;
     private javax.swing.JTextField tfPeriodoGemeos;
     private javax.swing.JTextField tfPeriodoGemeos1;
     private javax.swing.JTextField tfPeriodoLeao;
     private javax.swing.JTextField tfPeriodoLeao1;
     private javax.swing.JTextField tfPeriodoLibra;
+    private javax.swing.JTextField tfPeriodoPeixe;
     private javax.swing.JTextField tfPeriodoSagitario;
-    private javax.swing.JTextField tfPeriodoTouro;
     private javax.swing.JTextField tfPeriodoTouro1;
     private javax.swing.JTextField tfPeriodoTouro2;
     private javax.swing.JTextField tfPeriodoTouro3;
     private javax.swing.JTextField tfPeriodoVirgem;
     private javax.swing.JTextField tfPeriodoVirgem1;
+    private javax.swing.JTextField tfPlanetaAquario;
     private javax.swing.JTextField tfPlanetaAries;
-    private javax.swing.JTextField tfPlanetaAries10;
     private javax.swing.JTextField tfPlanetaAries11;
     private javax.swing.JTextField tfPlanetaAries12;
     private javax.swing.JTextField tfPlanetaAries13;
@@ -9617,21 +10503,21 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfPlanetaCancer;
     private javax.swing.JTextField tfPlanetaCancer1;
     private javax.swing.JTextField tfPlanetaCapricornio;
+    private javax.swing.JTextField tfPlanetaEscorpiao;
     private javax.swing.JTextField tfPlanetaGemeos;
     private javax.swing.JTextField tfPlanetaGemeos1;
     private javax.swing.JTextField tfPlanetaLeao;
     private javax.swing.JTextField tfPlanetaLeao1;
     private javax.swing.JTextField tfPlanetaLibra;
+    private javax.swing.JTextField tfPlanetaPeixe;
     private javax.swing.JTextField tfPlanetaSagitario;
-    private javax.swing.JTextField tfPlanetaTouro;
     private javax.swing.JTextField tfPlanetaTouro1;
     private javax.swing.JTextField tfPlanetaTouro2;
     private javax.swing.JTextField tfPlanetaTouro3;
     private javax.swing.JTextField tfPlanetaVirgem;
     private javax.swing.JTextField tfPlanetaVirgem1;
+    private javax.swing.JTextField tfSaudeAquario;
     private javax.swing.JTextField tfSaudeAries;
-    private javax.swing.JTextField tfSaudeAries1;
-    private javax.swing.JTextField tfSaudeAries10;
     private javax.swing.JTextField tfSaudeAries11;
     private javax.swing.JTextField tfSaudeAries12;
     private javax.swing.JTextField tfSaudeAries13;
@@ -9641,21 +10527,22 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfSaudeAries8;
     private javax.swing.JTextField tfSaudeCancer;
     private javax.swing.JTextField tfSaudeCancer1;
+    private javax.swing.JTextField tfSaudeCapricornio;
+    private javax.swing.JTextField tfSaudeEscorpiao;
     private javax.swing.JTextField tfSaudeGemeos;
     private javax.swing.JTextField tfSaudeGemeos1;
     private javax.swing.JTextField tfSaudeLeao;
     private javax.swing.JTextField tfSaudeLeao1;
     private javax.swing.JTextField tfSaudeLibra;
+    private javax.swing.JTextField tfSaudePeixe;
     private javax.swing.JTextField tfSaudeSagitario;
-    private javax.swing.JTextField tfSaudeTouro;
     private javax.swing.JTextField tfSaudeTouro1;
     private javax.swing.JTextField tfSaudeTouro2;
     private javax.swing.JTextField tfSaudeTouro3;
     private javax.swing.JTextField tfSaudeVirgem;
     private javax.swing.JTextField tfSaudeVirgem1;
+    private javax.swing.JTextField tfSorteAquario;
     private javax.swing.JTextField tfSorteAries;
-    private javax.swing.JTextField tfSorteAries1;
-    private javax.swing.JTextField tfSorteAries10;
     private javax.swing.JTextField tfSorteAries11;
     private javax.swing.JTextField tfSorteAries12;
     private javax.swing.JTextField tfSorteAries13;
@@ -9665,21 +10552,22 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfSorteAries8;
     private javax.swing.JTextField tfSorteCancer;
     private javax.swing.JTextField tfSorteCancer1;
+    private javax.swing.JTextField tfSorteCapricornio;
+    private javax.swing.JTextField tfSorteEscorpiao;
     private javax.swing.JTextField tfSorteGemeos;
     private javax.swing.JTextField tfSorteGemeos1;
     private javax.swing.JTextField tfSorteLeao;
     private javax.swing.JTextField tfSorteLeao1;
     private javax.swing.JTextField tfSorteLibra;
+    private javax.swing.JTextField tfSortePeixe;
     private javax.swing.JTextField tfSorteSagitario;
-    private javax.swing.JTextField tfSorteTouro;
     private javax.swing.JTextField tfSorteTouro1;
     private javax.swing.JTextField tfSorteTouro2;
     private javax.swing.JTextField tfSorteTouro3;
     private javax.swing.JTextField tfSorteVirgem;
     private javax.swing.JTextField tfSorteVirgem1;
+    private javax.swing.JTextField tfTrabalhoAquario;
     private javax.swing.JTextField tfTrabalhoAries;
-    private javax.swing.JTextField tfTrabalhoAries1;
-    private javax.swing.JTextField tfTrabalhoAries10;
     private javax.swing.JTextField tfTrabalhoAries11;
     private javax.swing.JTextField tfTrabalhoAries12;
     private javax.swing.JTextField tfTrabalhoAries13;
@@ -9689,21 +10577,22 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextField tfTrabalhoAries8;
     private javax.swing.JTextField tfTrabalhoCancer;
     private javax.swing.JTextField tfTrabalhoCancer1;
+    private javax.swing.JTextField tfTrabalhoCapricornio;
+    private javax.swing.JTextField tfTrabalhoEscorpiao;
     private javax.swing.JTextField tfTrabalhoGemeos;
     private javax.swing.JTextField tfTrabalhoGemeos1;
     private javax.swing.JTextField tfTrabalhoLeao;
     private javax.swing.JTextField tfTrabalhoLeao1;
     private javax.swing.JTextField tfTrabalhoLibra;
+    private javax.swing.JTextField tfTrabalhoPeixe;
     private javax.swing.JTextField tfTrabalhoSagitario;
-    private javax.swing.JTextField tfTrabalhoTouro;
     private javax.swing.JTextField tfTrabalhoTouro1;
     private javax.swing.JTextField tfTrabalhoTouro2;
     private javax.swing.JTextField tfTrabalhoTouro3;
     private javax.swing.JTextField tfTrabalhoVirgem;
     private javax.swing.JTextField tfTrabalhoVirgem1;
+    private javax.swing.JLabel tituloAquario;
     private javax.swing.JLabel tituloAries;
-    private javax.swing.JLabel tituloAries10;
-    private javax.swing.JLabel tituloAries11;
     private javax.swing.JLabel tituloAries12;
     private javax.swing.JLabel tituloAries13;
     private javax.swing.JLabel tituloAries14;
@@ -9719,25 +10608,26 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel tituloCapricornio;
     private javax.swing.JLabel tituloCaracteristicaVirgem;
     private javax.swing.JLabel tituloCaracteristicaVirgem1;
-    private javax.swing.JLabel tituloCaracteristicas;
     private javax.swing.JLabel tituloCaracteristicas1;
-    private javax.swing.JLabel tituloCaracteristicas10;
     private javax.swing.JLabel tituloCaracteristicas11;
     private javax.swing.JLabel tituloCaracteristicas12;
     private javax.swing.JLabel tituloCaracteristicas13;
     private javax.swing.JLabel tituloCaracteristicas14;
     private javax.swing.JLabel tituloCaracteristicas3;
     private javax.swing.JLabel tituloCaracteristicas8;
+    private javax.swing.JLabel tituloCaracteristicasAquario;
+    private javax.swing.JLabel tituloCaracteristicasAries;
     private javax.swing.JLabel tituloCaracteristicasCancer;
     private javax.swing.JLabel tituloCaracteristicasCancer1;
     private javax.swing.JLabel tituloCaracteristicasCapricornio;
+    private javax.swing.JLabel tituloCaracteristicasEscorpiao;
     private javax.swing.JLabel tituloCaracteristicasGemeos;
     private javax.swing.JLabel tituloCaracteristicasGemeos1;
     private javax.swing.JLabel tituloCaracteristicasLeao;
     private javax.swing.JLabel tituloCaracteristicasLeao1;
     private javax.swing.JLabel tituloCaracteristicasLibra;
+    private javax.swing.JLabel tituloCaracteristicasPeixe;
     private javax.swing.JLabel tituloCaracteristicasSagitario;
-    private javax.swing.JLabel tituloCaracteristicasTouro;
     private javax.swing.JLabel tituloCaracteristicasTouro1;
     private javax.swing.JLabel tituloCaracteristicasTouro2;
     private javax.swing.JLabel tituloCaracteristicasTouro3;
@@ -9745,9 +10635,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel tituloCaracteristicasVirgem1;
     private javax.swing.JLabel tituloCompatibilidadeLeao;
     private javax.swing.JLabel tituloCompatibilidadeLeao1;
+    private javax.swing.JLabel tituloEnergiaAquario;
     private javax.swing.JLabel tituloEnergiaAries;
-    private javax.swing.JLabel tituloEnergiaAries1;
-    private javax.swing.JLabel tituloEnergiaAries10;
     private javax.swing.JLabel tituloEnergiaAries11;
     private javax.swing.JLabel tituloEnergiaAries12;
     private javax.swing.JLabel tituloEnergiaAries13;
@@ -9757,24 +10646,26 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel tituloEnergiaAries8;
     private javax.swing.JLabel tituloEnergiaCancer;
     private javax.swing.JLabel tituloEnergiaCancer1;
+    private javax.swing.JLabel tituloEnergiaCapricornio;
+    private javax.swing.JLabel tituloEnergiaEscorpiao;
     private javax.swing.JLabel tituloEnergiaGemeos;
     private javax.swing.JLabel tituloEnergiaGemeos1;
     private javax.swing.JLabel tituloEnergiaLeao;
     private javax.swing.JLabel tituloEnergiaLeao1;
     private javax.swing.JLabel tituloEnergiaLibra;
+    private javax.swing.JLabel tituloEnergiaPeixe;
     private javax.swing.JLabel tituloEnergiaSagitario;
-    private javax.swing.JLabel tituloEnergiaTouro;
     private javax.swing.JLabel tituloEnergiaTouro1;
     private javax.swing.JLabel tituloEnergiaTouro2;
     private javax.swing.JLabel tituloEnergiaTouro3;
     private javax.swing.JLabel tituloEnergiaVirgem;
     private javax.swing.JLabel tituloEnergiaVirgem1;
+    private javax.swing.JLabel tituloEscorpiao;
     private javax.swing.JLabel tituloGemeos;
     private javax.swing.JLabel tituloGemeos1;
     private javax.swing.JLabel tituloLibra;
+    private javax.swing.JLabel tituloMensagemAquario;
     private javax.swing.JLabel tituloMensagemAries;
-    private javax.swing.JLabel tituloMensagemAries1;
-    private javax.swing.JLabel tituloMensagemAries10;
     private javax.swing.JLabel tituloMensagemAries11;
     private javax.swing.JLabel tituloMensagemAries12;
     private javax.swing.JLabel tituloMensagemAries13;
@@ -9784,23 +10675,30 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel tituloMensagemAries8;
     private javax.swing.JLabel tituloMensagemCancer;
     private javax.swing.JLabel tituloMensagemCancer1;
+    private javax.swing.JLabel tituloMensagemCapricornio;
+    private javax.swing.JLabel tituloMensagemEscorpiao;
     private javax.swing.JLabel tituloMensagemGemeos;
     private javax.swing.JLabel tituloMensagemGemeos1;
     private javax.swing.JLabel tituloMensagemLeao;
     private javax.swing.JLabel tituloMensagemLeao1;
     private javax.swing.JLabel tituloMensagemLibra;
+    private javax.swing.JLabel tituloMensagemPeixe;
     private javax.swing.JLabel tituloMensagemSagitario;
-    private javax.swing.JLabel tituloMensagemTouro;
     private javax.swing.JLabel tituloMensagemTouro1;
     private javax.swing.JLabel tituloMensagemTouro2;
     private javax.swing.JLabel tituloMensagemTouro3;
     private javax.swing.JLabel tituloMensagemVirgem;
     private javax.swing.JLabel tituloMensagemVirgem1;
+    private javax.swing.JLabel tituloPeixe;
     private javax.swing.JLabel tituloSagitario;
     private javax.swing.JPanel touro;
     private javax.swing.JPanel touro1;
+    private javax.swing.JLabel trabalhoAquario;
+    private javax.swing.JLabel trabalhoAries;
     private javax.swing.JLabel trabalhoCancer;
     private javax.swing.JLabel trabalhoCancer1;
+    private javax.swing.JLabel trabalhoCapricornio;
+    private javax.swing.JLabel trabalhoEscorpiao;
     private javax.swing.JLabel trabalhoGemeos;
     private javax.swing.JLabel trabalhoGemeos1;
     private javax.swing.JLabel trabalhoLeao;
@@ -9811,24 +10709,27 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JLabel trabalhoVirgem1;
     private javax.swing.JTextArea txMemsagemGemeos;
     private javax.swing.JTextArea txMemsagemGemeos1;
+    private javax.swing.JTextArea txMensagemAquario;
+    private javax.swing.JTextArea txMensagemAries;
     private javax.swing.JTextArea txMensagemCancer;
     private javax.swing.JTextArea txMensagemCancer1;
+    private javax.swing.JTextArea txMensagemCapricornio;
+    private javax.swing.JTextArea txMensagemEscorpiao;
     private javax.swing.JTextArea txMensagemLeao;
     private javax.swing.JTextArea txMensagemLeao1;
     private javax.swing.JTextArea txMensagemLibra;
     private javax.swing.JTextArea txMensagemSagitario;
     private javax.swing.JTextArea txMensagemVirgem;
     private javax.swing.JTextArea txMensagemVirgem1;
+    private javax.swing.JTextArea txMensagemdoPeixe;
     private javax.swing.JTextArea txMensagemdoTouro;
-    private javax.swing.JTextArea txMensagemdoTouro1;
     private javax.swing.JTextArea txMensagemdoTouro2;
     private javax.swing.JTextArea txMensagemdoTouro3;
-    private javax.swing.JTextArea txPForteTouro;
+    private javax.swing.JTextArea txPFortePeixe;
     private javax.swing.JTextArea txPForteTouro1;
     private javax.swing.JTextArea txPForteTouro2;
     private javax.swing.JTextArea txPForteTouro3;
-    private javax.swing.JTextArea txPFortesAries;
-    private javax.swing.JTextArea txPFortesAries10;
+    private javax.swing.JTextArea txPFortesAquario;
     private javax.swing.JTextArea txPFortesAries11;
     private javax.swing.JTextArea txPFortesAries12;
     private javax.swing.JTextArea txPFortesAries13;
@@ -9846,9 +10747,8 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextArea txPFortesSagitario;
     private javax.swing.JTextArea txPFortesVirgem;
     private javax.swing.JTextArea txPFortesVirgem1;
+    private javax.swing.JTextArea txPrevisaoAquario;
     private javax.swing.JTextArea txPrevisaoAries;
-    private javax.swing.JTextArea txPrevisaoAries1;
-    private javax.swing.JTextArea txPrevisaoAries10;
     private javax.swing.JTextArea txPrevisaoAries11;
     private javax.swing.JTextArea txPrevisaoAries12;
     private javax.swing.JTextArea txPrevisaoAries13;
@@ -9858,21 +10758,23 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextArea txPrevisaoAries8;
     private javax.swing.JTextArea txPrevisaoCancer;
     private javax.swing.JTextArea txPrevisaoCancer1;
+    private javax.swing.JTextArea txPrevisaoCapricornio;
+    private javax.swing.JTextArea txPrevisaoEscorpiao;
     private javax.swing.JTextArea txPrevisaoGemeos;
     private javax.swing.JTextArea txPrevisaoGemeos1;
     private javax.swing.JTextArea txPrevisaoLeao;
     private javax.swing.JTextArea txPrevisaoLeao1;
     private javax.swing.JTextArea txPrevisaoLibra;
+    private javax.swing.JTextArea txPrevisaoPeixes;
     private javax.swing.JTextArea txPrevisaoSagitario;
     private javax.swing.JTextArea txPrevisaoTouro;
-    private javax.swing.JTextArea txPrevisaoTouro1;
     private javax.swing.JTextArea txPrevisaoTouro2;
     private javax.swing.JTextArea txPrevisaoTouro3;
     private javax.swing.JTextArea txPrevisaoVirgem;
     private javax.swing.JTextArea txPrevisaoVirgem1;
     private javax.swing.JTextArea txpFortesLibra;
+    private javax.swing.JTextArea txpMelhorarAquario;
     private javax.swing.JTextArea txpMelhorarAries;
-    private javax.swing.JTextArea txpMelhorarAries10;
     private javax.swing.JTextArea txpMelhorarAries11;
     private javax.swing.JTextArea txpMelhorarAries12;
     private javax.swing.JTextArea txpMelhorarAries13;
@@ -9883,13 +10785,14 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JTextArea txpMelhorarCancer;
     private javax.swing.JTextArea txpMelhorarCancer1;
     private javax.swing.JTextArea txpMelhorarCapricornio;
+    private javax.swing.JTextArea txpMelhorarEscorpiao;
     private javax.swing.JTextArea txpMelhorarGemeos;
     private javax.swing.JTextArea txpMelhorarGemeos1;
     private javax.swing.JTextArea txpMelhorarLeao;
     private javax.swing.JTextArea txpMelhorarLeao1;
     private javax.swing.JTextArea txpMelhorarLibra;
+    private javax.swing.JTextArea txpMelhorarPeixe;
     private javax.swing.JTextArea txpMelhorarSagitario;
-    private javax.swing.JTextArea txpMelhorarTouro;
     private javax.swing.JTextArea txpMelhorarTouro1;
     private javax.swing.JTextArea txpMelhorarTouro2;
     private javax.swing.JTextArea txpMelhorarTouro3;
@@ -9898,4 +10801,4 @@ public class Signos extends javax.swing.JFrame {
     private javax.swing.JPanel virgem;
     private javax.swing.JPanel virgem1;
     // End of variables declaration//GEN-END:variables
-}
+
