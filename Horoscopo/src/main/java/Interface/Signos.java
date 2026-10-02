@@ -987,7 +987,7 @@ public void TocarMusica() {
         }
 
         // Localizar o arquivo dentro do projeto
-        java.net.URL arquivo = getClass().getResource("/audio/musica.wav");
+        java.net.URL arquivo = getClass().getResource("/musica/bts.wav");
 
         if (arquivo == null) {
             JOptionPane.showMessageDialog(this, "Arquivo de música não encontrado!");
@@ -1058,6 +1058,8 @@ public void PararMusica() {
         jbCompatibilidade = new javax.swing.JLabel();
         btnSigno = new javax.swing.JButton();
         tfCompatibilidade = new javax.swing.JTextField();
+        btnPlay = new javax.swing.JButton();
+        btnPause = new javax.swing.JButton();
         imagemfundoinicio = new javax.swing.JLabel();
         aries = new javax.swing.JPanel();
         areaInformacoesAries = new javax.swing.JPanel();
@@ -1744,15 +1746,29 @@ public void PararMusica() {
         tfCompatibilidade.setBackground(new java.awt.Color(255, 255, 204));
         tfCompatibilidade.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        btnPlay.setText("Play music");
+        btnPlay.addActionListener(this::btnPlayActionPerformed);
+
+        btnPause.setText("Pause music");
+        btnPause.addActionListener(this::btnPauseActionPerformed);
+
         javax.swing.GroupLayout areaResultadoLayout = new javax.swing.GroupLayout(areaResultado);
         areaResultado.setLayout(areaResultadoLayout);
         areaResultadoLayout.setHorizontalGroup(
             areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaResultadoLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(tfCompatibilidade, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
             .addGroup(areaResultadoLayout.createSequentialGroup()
-                .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(areaResultadoLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(signo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap()
+                        .addComponent(signo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnPlay)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnPause))
                     .addGroup(areaResultadoLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1760,27 +1776,30 @@ public void PararMusica() {
                             .addGroup(areaResultadoLayout.createSequentialGroup()
                                 .addGap(49, 49, 49)
                                 .addComponent(jbCompatibilidade)))))
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaResultadoLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(tfCompatibilidade, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         areaResultadoLayout.setVerticalGroup(
             areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaResultadoLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(signo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(areaResultadoLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(signo))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaResultadoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(areaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPlay)
+                            .addComponent(btnPause))))
+                .addGap(18, 18, 18)
                 .addComponent(btnSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jbCompatibilidade, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfCompatibilidade, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(67, 67, 67))
         );
 
-        iniciio.add(areaResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 320, 530));
+        iniciio.add(areaResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 320, 540));
 
         imagemfundoinicio.setBackground(new java.awt.Color(0, 0, 0));
         imagemfundoinicio.setFont(new java.awt.Font("Wide Latin", 0, 18)); // NOI18N
@@ -2511,14 +2530,6 @@ public void PararMusica() {
                 .addContainerGap()
                 .addGroup(areaInformacoesGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(areaInformacoesGemeosLayout.createSequentialGroup()
-                        .addGroup(areaInformacoesGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(elementoGemeos)
-                            .addGroup(areaInformacoesGemeosLayout.createSequentialGroup()
-                                .addComponent(corGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfCorGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(areaInformacoesGemeosLayout.createSequentialGroup()
                         .addGroup(areaInformacoesGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(areaInformacoesGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(tfElementoGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2533,6 +2544,11 @@ public void PararMusica() {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(areaInformacoesGemeosLayout.createSequentialGroup()
                         .addGroup(areaInformacoesGemeosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(elementoGemeos)
+                            .addGroup(areaInformacoesGemeosLayout.createSequentialGroup()
+                                .addComponent(corGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(tfCorGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(areaInformacoesGemeosLayout.createSequentialGroup()
                                 .addComponent(numeroGemeos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -3752,10 +3768,7 @@ public void PararMusica() {
                             .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
                                 .addComponent(corLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfCorLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
-                        .addGroup(areaInformacoesLibraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tfCorLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(areaInformacoesLibraLayout.createSequentialGroup()
                                 .addComponent(numeroLibra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -5729,6 +5742,14 @@ CalcularSigno();        // TODO add your handling code here:
 CalcularCompatibilidade();        // TODO add your handling code here:
     }//GEN-LAST:event_btnCalcularActionPerformed
 
+    private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
+TocarMusica();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPlayActionPerformed
+
+    private void btnPauseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPauseActionPerformed
+PausarMusica();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPauseActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5859,6 +5880,8 @@ CalcularCompatibilidade();        // TODO add your handling code here:
     private javax.swing.JButton btnCopiarMensagemTouro1;
     private javax.swing.JButton btnCopiarMensagemVirgem;
     private javax.swing.JButton btnDescobrirSigno;
+    private javax.swing.JButton btnPause;
+    private javax.swing.JButton btnPlay;
     private javax.swing.JButton btnSigno;
     private javax.swing.JPanel cancer;
     private javax.swing.JPanel capricornio;
